@@ -1,0 +1,38 @@
+@import "src/components/text-inputs-mixin";
+
+future-tao-input {
+  @import "../form-line-default.scss";
+
+  .offset-content {
+    padding-left: 15px;
+  }
+
+  mat-icon {
+    background-image: url("/assets/images/tao-large.svg");
+    background-size: contain;
+  }
+
+  .mat-button,
+  .mat-icon-button,
+  .mat-stroked-button {
+    background: $color-green;
+    &.empty {
+      opacity: 0.5;
+    }
+  }
+
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    padding-left: 10px;
+  }
+
+  .additional-character {
+    position: absolute;
+    bottom: 8px;
+    left: 1px;
+  }
+
+  input {
+    @include text-inputs-font-mixin;
+  }
+}
