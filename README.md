@@ -1,7 +1,7 @@
-# tao-web
-Angular web app for tao-wallet.
+# Tao Wallet Web App
+Angular web app for Tao Wallet.
 
-### install
+### How to Install
 
 Clone the repo and navigate to it:
 ```
@@ -10,7 +10,8 @@ cd tao-web
 ```
 
 Run npm install:
-```npm install
+```
+npm install
 ```
 
 Install Angular CLI globally:
