@@ -32,7 +32,8 @@
       "tls": ["./node_modules/tls"],
       "net": ["./node_modules/tls"],
       "crypto":["node_modules/crypto-browserify"],
-      "stream":["node_modules/stream-browserify"]
+      "stream":["node_modules/stream-browserify"],
+      "zlib":["node_modules/browserify-zlib"]
 
     }
   },
