@@ -1,19 +1,19 @@
-.get-started-container {
-  width: 50%;
+.intro-page-container {
+  height: 100%;
   display: block;
-  margin: auto;
-  text-align: center;
 }
 
 .video-container{
   overflow:hidden;
   display: flex;
   justify-content: center;
+  height: 1000px;
+  margin-top: -150px;
 }
 
 .video{
-    pointer-events: none;
-    margin: -300px;
+  pointer-events: none;
+  margin: -200px;
 }
 
 .fade-in-button {

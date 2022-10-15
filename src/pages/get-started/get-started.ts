@@ -12,10 +12,11 @@ import { LNMarketsProvider } from 'src/providers/ln-markets'
   styleUrls: ['./get-started.scss']
 })
 
-export class GetStartedPage {
+export class GetStartedPage implements OnInit {
 
   form: UntypedFormGroup;
   submitted: boolean;
+  showLoginButtons: boolean;
 
   constructor(
     private fb: UntypedFormBuilder,
@@ -27,13 +28,8 @@ export class GetStartedPage {
     });
   }
 
-  ngOnInIt() {
-    console.log('test')
-  }
+  ngOnInit() {
 
-  async test() {
-    const test = await this.lnMarkets.login();
-    console.log(test)
   }
 
 }

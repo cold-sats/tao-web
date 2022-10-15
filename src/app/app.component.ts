@@ -20,11 +20,7 @@ export class AppComponent implements OnInit {
   async ngOnInit() {
     this.loaded = false;
     try {
-      if (this.router.url == '/') {
-        const hasSecret = false //TODO
-        const path = hasSecret ? [''] : ['get-started'];
-        this.router.navigate(path);
-      }
+      const hasSecret = false //TODO
     } catch(err) {
       console.log(err)
     }

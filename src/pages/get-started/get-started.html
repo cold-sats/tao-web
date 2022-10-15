@@ -1,17 +1,19 @@
-<img class="get-started-header" src="assets/images/tao-large.svg">
+<div class="get-started-container">
+  <tao-text
+    [body]="'Here is some text'">
+  </tao-text>
 
-<form [formGroup]="form" novalidate action="#">
-  <div style="text-align:center">
-    <tao-input
-      formControlName="login"
-      [form]="form.controls['login']"
-      [label]="'Input Example'"
-      [errorMessage]="'Please enter a valid address'"
-      [submitted]="submitted">
-    </tao-input>
-  </div>
-</form>
-
-<div (click)="test()" style="text-align:center; cursor:pointer">
-  <u>Test LNMarkets Login</u>
+  <div class="page-container">
+    <form [formGroup]="form" novalidate action="#">
+      <div style="text-align:center">
+        <tao-input
+          formControlName="login"
+          [form]="form.controls['login']"
+          [label]="'Input Example'"
+          [errorMessage]="'Please enter a valid address'"
+          [submitted]="submitted">
+        </tao-input>
+      </div>
+    </form>
+  <div>
 </div>

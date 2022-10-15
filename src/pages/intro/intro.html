@@ -1,0 +1,24 @@
+<div class="intro-page-container">
+  <div class="video-container">
+    <video class="video" id="video" playsinline autoplay muted="true">
+      <source src="/assets/videos/tao-blacks.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="page-container">
+    <ng-container *ngIf="showLoginButtons">
+      <tao-button
+        style="width:400px; margin: auto; position: fixed; bottom: 120px"
+        [text]="'Get Started'"
+        class="primary fade-in-button"
+        [action]="goToGetStartedPage.bind(this)">
+      </tao-button>
+      <tao-button
+        style="width:400px; margin: auto; position: fixed; bottom: 50px"
+        [text]="'Login'"
+        class="secondary fade-in-button"
+        [action]="goToLoginPage.bind(this)">
+      </tao-button>
+    </ng-container>
+  </div>
+<div>

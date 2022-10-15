@@ -13,8 +13,11 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { MenuComponent } from 'src/components/menu/menu';
 import { InputComponent } from 'src/components/input/input';
+import { ButtonComponent } from 'src/components/button/button';
+import { TextComponent } from 'src/components/text/text';
 
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -25,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     MenuComponent,
     InputComponent,
+    ButtonComponent,
+    TextComponent,
     ...pages
   ],
   imports: [
@@ -32,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatButtonModule,
     MatFormFieldModule,
     AppRoutingModule,
     BrowserModule,
