@@ -1,24 +1,37 @@
-@import "src/components/text-inputs-mixin";
 
-future-tao-input {
-  @import "../form-line-default.scss";
+mat-form-field {
+  width: 100%;
+
+  .mat-form-field-outline {
+    color: white !important;
+  }
+  .mat-form-field-label {
+    color: white !important;
+    font: Avenir, serif !important;
+    font-weight: 300 !important;
+  }
+}
+
+input {
+  font: 16px Avenir, serif !important;
+  font-weight: 300 !important;
+  color: white !important;
+}
+
+.outline-field-label-icon{
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  margin-bottom: -3px;
+}
+
 
   .offset-content {
     padding-left: 15px;
   }
 
   mat-icon {
-    background-image: url("/assets/images/tao-large.svg");
     background-size: contain;
-  }
-
-  .mat-button,
-  .mat-icon-button,
-  .mat-stroked-button {
-    background: $color-green;
-    &.empty {
-      opacity: 0.5;
-    }
   }
 
   .mat-form-field-prefix,
@@ -31,8 +44,3 @@ future-tao-input {
     bottom: 8px;
     left: 1px;
   }
-
-  input {
-    @include text-inputs-font-mixin;
-  }
-}

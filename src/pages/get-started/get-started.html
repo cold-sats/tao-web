@@ -1,6 +1,13 @@
 <div class="get-started-container">
+
   <tao-text
-    [body]="'Here is some text'">
+    [header]="'Get Started with Tao'">
+  </tao-text>
+
+  <br><br>
+
+  <tao-text
+    [body]="'Here are some custom components'">
   </tao-text>
 
   <div class="page-container">
@@ -10,10 +17,23 @@
           formControlName="login"
           [form]="form.controls['login']"
           [label]="'Input Example'"
+          [icon]="'assets/images/icons/question-mark.svg'"
           [errorMessage]="'Please enter a valid address'"
           [submitted]="submitted">
         </tao-input>
       </div>
     </form>
   <div>
+
 </div>
+
+
+<!--
+  TODO:
+  -tao wrapper
+  -tao row
+  -tao select
+  -tao radio buttons
+  -tao checkbox
+  etc.
+  -->

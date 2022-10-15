@@ -1,7 +1,7 @@
 <mat-form-field
   [class.invalid-field]="!form.valid && submitted"
-  [class.no-border]="noBorder"
-  appearance="outline">
+  appearance="outline"
+  class="border-white">
 
   <mat-label *ngIf="label">
     <img *ngIf="icon" class="outline-field-label-icon" [src]="icon">
@@ -32,9 +32,6 @@
     (focus)="setFocused(true)"
     (focusout)="setFocused(false)"/>
 
-  <span class="additional-character" *ngIf="inputMask?.additionalCharacter && !isInputEmpty">
-    {{ inputMask?.additionalCharacter }}
-  </span>
 </mat-form-field>
 
 <span *ngIf="!form.valid && submitted">
