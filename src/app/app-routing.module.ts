@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { GetStartedPage } from 'src/pages/get-started/get-started';
+import { StyleGuidePage } from 'src/pages/style-guide/style-guide';
 import { IntroPage } from 'src/pages/intro/intro';
 
 export const pages = [
-  GetStartedPage,
+  StyleGuidePage,
   IntroPage
 ];
 
 const routes: Routes = [
-  { path: 'get-started', component: GetStartedPage },
+  { path: 'style-guide', component: StyleGuidePage },
   { path: '', component: IntroPage }
 ];
 

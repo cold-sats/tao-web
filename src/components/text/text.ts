@@ -29,6 +29,7 @@ export class TextComponent implements OnInit, OnChanges {
   @Input() helper: string;
   @Input() header: string;
   @Input() title: string;
+  @Input() link: string;
 
   @Output() action: EventEmitter<any> = new EventEmitter();
   cooldown = false;
@@ -43,6 +44,7 @@ export class TextComponent implements OnInit, OnChanges {
     header: 'header',
     title: 'title',
     helper: 'helper',
+    link: 'link'
   };
   currentClass: { [key: string]: boolean };
 

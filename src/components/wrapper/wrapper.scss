@@ -1,0 +1,19 @@
+@import "src/components/style-variables";
+
+tao-wrapper {
+  display: block;
+  padding-top: 30px;
+  margin: auto;
+}
+
+.desktop {
+  height: 80%;
+  width: 400px;
+  background: #1E1E1E;
+  padding: 40px 20px 20px 20px;
+  margin-top: -40px;
+}
+
+.mobile {
+  width: 100%;
+}

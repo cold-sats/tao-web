@@ -2,6 +2,8 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
+import { LNMarketsProvider } from 'src/providers/ln-markets'
+
 @Component({
   templateUrl: './intro.html',
   styleUrls: ['./intro.scss']
@@ -12,7 +14,8 @@ export class IntroPage implements OnInit {
   showLoginButtons: boolean;
 
   constructor(
-    public router: Router
+    public router: Router,
+    public lnMarkets: LNMarketsProvider
   ) {}
 
   ngOnInit() {
@@ -23,11 +26,12 @@ export class IntroPage implements OnInit {
   }
 
   goToGetStartedPage() {
-    this.router.navigate(['get-started']);
+    this.router.navigate(['style-guide']);
   }
 
-  goToLoginPage() {
-    this.router.navigate(['login']);
+  async goToLoginPage() {
+    const test = await this.lnMarkets.login();
+    console.log(test)
   }
 
 }

@@ -2,17 +2,15 @@ tao-text{
 
   .body {
     display: inline;
-    font: 12px Avenir, serif;
+    font: 16px Avenir, serif;
     font-weight: 300;
-    font-size: 16px;
     color: white;
   }
 
   .header {
     display: inline;
-    font: 12px Avenir, serif;
-    font-weight: 300;
-    font-size: 16px;
+    font: 20px Avenir, serif;
+    font-weight: 400;
     color: white;
   }
 
@@ -26,9 +24,8 @@ tao-text{
 
   .title {
     display: inline;
-    font: 12px Avenir, serif;
+    font: 27px Avenir, serif;
     font-weight: 300;
-    font-size: 16px;
     line-height: 13px;
     color: white;
   }
@@ -41,6 +38,13 @@ tao-text{
     font-weight: 400 !important;
     cursor: pointer;
     color: white;
+  }
+
+  .link {
+    display: inline;
+    font: 16px Avenir, serif;
+    font-weight: 400;
+    color: #EE9DD3;
   }
 
   a.mat-button {

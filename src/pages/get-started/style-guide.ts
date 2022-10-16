@@ -7,12 +7,12 @@ import { Storage } from '@ionic/storage';
 import { LNMarketsProvider } from 'src/providers/ln-markets'
 
 @Component({
-  selector: 'get-started',
-  templateUrl: './get-started.html',
-  styleUrls: ['./get-started.scss']
+  selector: 'style-guide',
+  templateUrl: './style-guide.html',
+  styleUrls: ['./style-guide.scss']
 })
 
-export class GetStartedPage implements OnInit {
+export class StyleGuidePage implements OnInit {
 
   form: UntypedFormGroup;
   submitted: boolean;

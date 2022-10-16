@@ -11,10 +11,12 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { IonicStorageModule } from '@ionic/storage';
 
-import { MenuComponent } from 'src/components/menu/menu';
+import { BottomNavComponent } from 'src/components/bottom-nav/bottom-nav';
+import { TopNavComponent } from 'src/components/top-nav/top-nav';
 import { InputComponent } from 'src/components/input/input';
 import { ButtonComponent } from 'src/components/button/button';
 import { TextComponent } from 'src/components/text/text';
+import { WrapperComponent } from 'src/components/wrapper/wrapper';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -26,10 +28,12 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
+    BottomNavComponent,
+    TopNavComponent,
     InputComponent,
     ButtonComponent,
     TextComponent,
+    WrapperComponent,
     ...pages
   ],
   imports: [
@@ -46,8 +50,6 @@ import { HttpClientModule } from '@angular/common/http';
     IonicStorageModule.forRoot()
   ],
   exports: [
-    MenuComponent,
-    InputComponent,
     ...pages
   ],
   providers: [
