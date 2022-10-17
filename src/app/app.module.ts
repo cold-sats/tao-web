@@ -17,6 +17,7 @@ import { InputComponent } from 'src/components/input/input';
 import { ButtonComponent } from 'src/components/button/button';
 import { TextComponent } from 'src/components/text/text';
 import { WrapperComponent } from 'src/components/wrapper/wrapper';
+import { RowComponent } from 'src/components/row/row';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -34,6 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
     ButtonComponent,
     TextComponent,
     WrapperComponent,
+    RowComponent,
     ...pages
   ],
   imports: [

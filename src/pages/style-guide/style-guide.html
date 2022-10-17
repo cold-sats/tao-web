@@ -4,55 +4,52 @@
 </tao-top-nav>
 
 <tao-wrapper>
-  
-  <tao-text
-    [header]="'Part 1: Text'">
-  </tao-text>
 
-  <div style="display: block; height: 1px; background: white; margin-top:10px"></div>
+  <tao-row [showDivider]="true" class="align-last-right no-padding">
+    <tao-text
+      [header]="'Part 1: Text'">
+    </tao-text>
+    <tao-text
+      [link]="'Text Link'">
+    </tao-text>
+  </tao-row>
 
-  <br>
+  <tao-row class="extra-bottom-padding">
+    <div style="display: block; height: 1px; background: white; margin-top:10px"></div>
+  </tao-row>
 
-  <tao-text
-    [body]="'We use text sizes, colors and weighting to distinguish between titles, headers, bodies and links.'">
-  </tao-text>
+  <tao-row>
+    <tao-text
+      [body]="'We use text sizes, colors and weighting to distinguish between titles, headers, bodies and links.'">
+    </tao-text>
+  </tao-row>
 
-  <br><br>
+  <tao-row>
+    <tao-text
+      [title]="'This is a title'">
+    </tao-text>
+  </tao-row>
 
-  <tao-text
-    [title]="'This is a title'">
-  </tao-text>
+  <tao-row>
+    <tao-text
+      [header]="'This is a header'">
+    </tao-text>
+  </tao-row>
 
-  <br><br>
+  <tao-row class="extra-bottom-padding">
+    <tao-text
+      [body]="'This is body'">
+    </tao-text>
+  </tao-row>
 
-  <tao-text
-    [header]="'This is a header'">
-  </tao-text>
+  <tao-row [showDivider]="true">
+    <tao-text
+      [header]="'Part 2: Forms'">
+    </tao-text>
+  </tao-row>
 
-  <br><br>
-
-  <tao-text
-    [body]="'This is body'">
-  </tao-text>
-
-  <br><br>
-
-  <tao-text
-    [link]="'This is a text link'">
-  </tao-text>
-
-  <br><br><br>
-
-  <tao-text
-    [header]="'Part 2: Forms'">
-  </tao-text>
-
-  <div style="display: block; height: 1px; background: white; margin-top:10px"></div>
-
-  <br>
-
-  <form [formGroup]="form" novalidate action="#">
-    <div style="text-align:center">
+  <tao-row>
+    <form [formGroup]="form" novalidate action="#">
       <tao-input
         formControlName="login"
         [form]="form.controls['login']"
@@ -61,18 +58,22 @@
         [errorMessage]="'Please enter a valid address'"
         [submitted]="submitted">
       </tao-input>
-    </div>
-  </form>
+    </form>
+  </tao-row>
 
 </tao-wrapper>
 
 
 <!--
   TODO:
-  -tao wrapper
-  -tao row
-  -tao select
-  -tao radio buttons
-  -tao checkbox
+  -image
+  -loading indicator
+  -error message
+  -select
+  -radio buttons
+  -checkbox
+  -text area
+  -toggle
+  -add two columns to row
   etc.
-  -->
+-->
