@@ -18,6 +18,7 @@ import { ButtonComponent } from 'src/components/button/button';
 import { TextComponent } from 'src/components/text/text';
 import { WrapperComponent } from 'src/components/wrapper/wrapper';
 import { RowComponent } from 'src/components/row/row';
+import { DividerComponent } from 'src/components/divider/divider';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     TextComponent,
     WrapperComponent,
     RowComponent,
+    DividerComponent,
     ...pages
   ],
   imports: [

@@ -5,7 +5,7 @@
 
 <tao-wrapper>
 
-  <tao-row [showDivider]="true" class="align-last-right no-padding">
+  <tao-row class="align-last-right no-padding">
     <tao-text
       [header]="'Part 1: Text'">
     </tao-text>
@@ -14,9 +14,7 @@
     </tao-text>
   </tao-row>
 
-  <tao-row class="extra-bottom-padding">
-    <div style="display: block; height: 1px; background: white; margin-top:10px"></div>
-  </tao-row>
+  <tao-divider></tao-divider>
 
   <tao-row>
     <tao-text
@@ -42,11 +40,13 @@
     </tao-text>
   </tao-row>
 
-  <tao-row [showDivider]="true">
+  <tao-row class="no-padding">
     <tao-text
       [header]="'Part 2: Forms'">
     </tao-text>
   </tao-row>
+
+  <tao-divider></tao-divider>
 
   <tao-row>
     <form [formGroup]="form" novalidate action="#">

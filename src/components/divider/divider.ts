@@ -1,15 +1,15 @@
 import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'tao-row',
+  selector: 'tao-divider',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./row.scss'],
+  styleUrls: ['./divider.scss'],
   template: `
-    <ng-content></ng-content>
-    `
+  <div class="divider"></div>
+  `
 })
 
-export class RowComponent implements OnInit {
+export class DividerComponent implements OnInit {
 
   ngOnInit() {
     //Can add behavior here in the future
