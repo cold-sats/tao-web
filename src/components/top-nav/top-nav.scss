@@ -3,6 +3,25 @@
   margin: 10px -5px 0 -40px;
 }
 
+.tao-logo {
+  height: 40px;
+  float: left;
+  padding: 8px 5px 0px 12px;
+  cursor: pointer;
+}
+
+.menu-item {
+  cursor: pointer;
+  height: 30px;
+  &:hover {
+    opacity: 60%
+  }
+}
+
+.margin-right {
+  margin-right: 80px;
+}
+
 .logo-container {
   display: flex;
   align-items: left;

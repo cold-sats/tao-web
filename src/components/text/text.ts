@@ -6,17 +6,15 @@ import {Component, ViewEncapsulation, Input, OnInit, OnChanges, Output, EventEmi
   styleUrls: ['./text.scss'],
   template: `
     <ng-container *ngIf="action.observers.length > 0">
-      <a mat-button
-        class="action-body-inline"
+      <a
         href="#"
-        (click)="executeAction($event)">
+        (click)="executeAction($event)"
+        [ngClass]="currentClass">
         {{currentText}}
       </a>
     </ng-container>
-
     <span
       *ngIf="action.observers.length === 0"
-      class="body-text"
       [innerHTML]="currentText"
       [ngClass]="currentClass">
     </span>

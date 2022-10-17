@@ -26,7 +26,7 @@ export class IntroPage implements OnInit {
   }
 
   goToGetStartedPage() {
-    this.router.navigate(['style-guide']);
+    this.router.navigate(['dashboard']);
   }
 
   async goToLoginPage() {

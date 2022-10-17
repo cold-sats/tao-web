@@ -7,10 +7,10 @@ import { Storage } from '@ionic/storage';
 import { LNMarketsProvider } from 'src/providers/ln-markets'
 
 @Component({
-  templateUrl: './style-guide.html'
+  templateUrl: './send-receive.html'
 })
 
-export class StyleGuidePage implements OnInit {
+export class SendReceivePage implements OnInit {
 
   form: UntypedFormGroup;
   submitted: boolean;
