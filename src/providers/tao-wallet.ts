@@ -12,7 +12,7 @@ export class TaoWalletProvider {
 
   async login(secret = '', network = 'testnet') {
     const lnmSecret = require('crypto').randomBytes(16).toString('hex');
-    const tao = new TaoWallet({ lnmSecret, network: 'mainnet' });
+    const tao = new TaoWallet({ lnmSecret, network: network });
     await tao.login();
   }
 

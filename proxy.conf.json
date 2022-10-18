@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://api.lnmarkets.com/v1",
+    "target": "https://api.testnet.lnmarkets.com/v1",
     "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
