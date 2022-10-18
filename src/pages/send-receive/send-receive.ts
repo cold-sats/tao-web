@@ -4,8 +4,6 @@ import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms
 
 import { Storage } from '@ionic/storage';
 
-import { LNMarketsProvider } from 'src/providers/ln-markets'
-
 @Component({
   templateUrl: './send-receive.html'
 })
@@ -18,7 +16,6 @@ export class SendReceivePage implements OnInit {
 
   constructor(
     private fb: UntypedFormBuilder,
-    public lnMarkets: LNMarketsProvider,
     public storage: Storage
   ) {
     this.form = this.fb.group({

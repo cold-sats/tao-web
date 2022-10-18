@@ -1,9 +1,7 @@
-import { LNMarketsProvider } from 'src/providers/ln-markets';
-import { HttpClientProvider  } from 'src/providers/http-client';
+import { TaoWalletProvider } from 'src/providers/tao-wallet';
 import { UntypedFormBuilder } from '@angular/forms';
 
 export const providers = [
-  LNMarketsProvider,
-  HttpClientProvider,
+  TaoWalletProvider,
   UntypedFormBuilder
 ];

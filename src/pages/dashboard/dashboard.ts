@@ -5,8 +5,6 @@ import { Router } from '@angular/router';
 
 import { Storage } from '@ionic/storage';
 
-import { LNMarketsProvider } from 'src/providers/ln-markets'
-
 @Component({
   templateUrl: './dashboard.html'
 })
@@ -19,7 +17,6 @@ export class DashboardPage implements OnInit {
 
   constructor(
     private fb: UntypedFormBuilder,
-    public lnMarkets: LNMarketsProvider,
     private router: Router,
     public storage: Storage
   ) {

@@ -2,7 +2,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { LNMarketsProvider } from 'src/providers/ln-markets'
+import { TaoWalletProvider } from 'src/providers/tao-wallet'
 
 @Component({
   templateUrl: './intro.html',
@@ -15,7 +15,7 @@ export class IntroPage implements OnInit {
 
   constructor(
     public router: Router,
-    public lnMarkets: LNMarketsProvider
+    private taoWallet: TaoWalletProvider
   ) {}
 
   ngOnInit() {
@@ -30,8 +30,8 @@ export class IntroPage implements OnInit {
   }
 
   async goToLoginPage() {
-    const test = await this.lnMarkets.login();
-    console.log(test)
+    const response = await this.taoWallet.login();
+    console.log(response)
   }
 
 }

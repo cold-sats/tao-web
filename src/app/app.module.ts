@@ -25,8 +25,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +40,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,

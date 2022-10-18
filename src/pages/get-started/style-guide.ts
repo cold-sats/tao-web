@@ -4,8 +4,6 @@ import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms
 
 import { Storage } from '@ionic/storage';
 
-import { LNMarketsProvider } from 'src/providers/ln-markets'
-
 @Component({
   selector: 'style-guide',
   templateUrl: './style-guide.html',
@@ -20,7 +18,6 @@ export class StyleGuidePage implements OnInit {
 
   constructor(
     private fb: UntypedFormBuilder,
-    public lnMarkets: LNMarketsProvider,
     public storage: Storage
   ) {
     this.form = this.fb.group({
