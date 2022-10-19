@@ -1,7 +1,7 @@
 {
   "/api": {
-    "target": "https://api.testnet.lnmarkets.com/v1",
-    "secure": true,
+    "target": "localhost:3000",
+    "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
       "^/api": ""
