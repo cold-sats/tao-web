@@ -11,7 +11,8 @@ export class TaoWalletProvider {
   ) {}
 
   async login(secret = '', network = 'testnet') {
-    this.http.post('localhost:3000/test-tao-login');
+    const test = this.http.post('http://localhost:3000/test-tao-login');
+    console.log(test)
   }
 
 }
