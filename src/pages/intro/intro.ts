@@ -31,7 +31,6 @@ export class IntroPage implements OnInit {
 
   async goToLoginPage() {
     const response = await this.taoWallet.login();
-    console.log(response)
   }
 
 }

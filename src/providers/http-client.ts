@@ -42,7 +42,6 @@ export class HttpClientProvider {
       'Content-Type': 'application/json'
     };
     const httpHeaders = new HttpHeaders(headers);
-    console.log(httpHeaders)
     return httpHeaders;
   }
 

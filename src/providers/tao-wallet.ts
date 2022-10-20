@@ -11,8 +11,10 @@ export class TaoWalletProvider {
   ) {}
 
   async login(secret = '', network = 'testnet') {
-    const test = this.http.post('http://localhost:3000/test-tao-login');
-    console.log(test)
+    const test = await this.http.get('http://localhost:3000/test');
+    console.log(test);
+    const invoice = await this.http.get('http://localhost:3000/invoice');
+    console.log(invoice);
   }
 
 }
