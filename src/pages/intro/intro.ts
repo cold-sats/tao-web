@@ -30,7 +30,10 @@ export class IntroPage implements OnInit {
   }
 
   async goToLoginPage() {
-    const response = await this.taoWallet.login();
+    const login = await this.taoWallet.login();
+    console.log(login);
+    const getLightningInvoice = await this.taoWallet.getLightningInvoice();
+    console.log(getLightningInvoice);
   }
 
 }

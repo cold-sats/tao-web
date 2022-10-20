@@ -10,11 +10,27 @@ export class TaoWalletProvider {
     private http: HttpClientProvider
   ) {}
 
-  async login(secret = '', network = 'testnet') {
-    const test = await this.http.get('http://localhost:3000/test');
-    console.log(test);
-    const depositAddress = await this.http.get('http://localhost:3000/deposit-address');
-    console.log(depositAddress);
+  async login(lnMarketsSecret = '', network = 'mainnet') {
+    lnMarketsSecret = require('crypto').randomBytes(16).toString('hex');
+    return await fetch('http://localhost:3000/login?' + new URLSearchParams({
+      lnMarketsSecret: lnMarketsSecret,
+      network: network
+    })).then(
+      async (response) => {
+        return await response.json();
+      }
+    );
+  }
+
+  async getLightningInvoice(amountSats = '9999', network = 'mainnet') {
+    return await fetch('http://localhost:3000/lightning-invoice?' + new URLSearchParams({
+      amountSats: amountSats,
+      network: network
+    })).then(
+      async (response) => {
+        return await response.json();
+      }
+    );
   }
 
 }

@@ -1,25 +1,30 @@
 const express = require('express');
+require('crypto');
 const app = express();
+app.locals.data = {};
 
 app.listen(3000, () => console.log('Node.js app listening on port 3000.'))
 app.use(express.static(__dirname + '/dist/tao-web'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 
 const TaoWallet = require('tao-wallet');
-const lnmSecret = require('crypto').randomBytes(16).toString('hex');
 
-app.get('/test', function(req, res) {
-  console.log('test');
-  return res.send({test: 'test'});
-})
-
-app.get('/deposit-address', async (req, res) => {
+app.get('/login', async (req, res) => {
   try {
-    const tao = await new TaoWallet({ lnmSecret, network: 'mainnet' });
+    const tao = await new TaoWallet({ lnmSecret: req.query.lnMarketsSecret, network: req.query.network });
+    app.locals.data.tao = tao;
     await tao.login();
-    const depositAddress = await tao.fetchDepositAddress({ type: 'bolt11', amountSats: 1000000 })
-    console.log(depositAddress);
-    return res.json(depositAddress);
+    return res.json(tao);
+  } catch (error) {
+    console.log(error)
+  }
+});
+
+app.get('/lightning-invoice', async (req, res) => {
+  console.log(req.query.amountSats)
+  try {
+    const invoice = await app.locals.data.tao.fetchDepositAddress({ type: 'bolt11', amountSats: parseInt(req.query.amountSats) })
+    return res.json(invoice);
   } catch (error) {
     console.log(error)
   }
