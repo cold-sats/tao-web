@@ -19,7 +19,7 @@ Install Angular CLI globally:
 npm install -g @angular/cli
 ```
 
-Run on http://localhost:4200/#/:
+Run on http://localhost:3000/#/:
 ```
-ng serve --open
+npm start
 ```
