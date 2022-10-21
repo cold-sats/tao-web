@@ -10,6 +10,16 @@
   cursor: pointer;
 }
 
+.tao-logo-mobile {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  height: 30px;
+  float: left;
+  padding: 8px 5px 0px 12px;
+  cursor: pointer;
+}
+
 .menu-item {
   cursor: pointer;
   height: 30px;
@@ -27,11 +37,11 @@
 }
 
 .margin-left-5-pt {
-  margin-left: 7.5%;
+  margin-left: 8%;
 }
 
 .margin-right-5-pt {
-  margin-right: 7.5%;
+  margin-right: 8%;
 }
 
 .margin-right {

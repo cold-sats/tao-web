@@ -27,6 +27,7 @@ export class TextComponent implements OnInit, OnChanges {
   @Input() helper: string;
   @Input() header: string;
   @Input() title: string;
+  @Input() hero: string;
   @Input() link: string;
 
   @Output() action: EventEmitter<any> = new EventEmitter();
@@ -41,6 +42,7 @@ export class TextComponent implements OnInit, OnChanges {
     body: 'body',
     header: 'header',
     title: 'title',
+    hero: 'hero',
     helper: 'helper',
     link: 'link'
   };

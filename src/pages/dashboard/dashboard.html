@@ -1,239 +1,49 @@
 <tao-nav
-  [title]="'Dashboard'">
+  [title]="'Balance'">
 </tao-nav>
 
 <tao-wrapper>
 
-  <tao-row>
+  <tao-row style="display: flex; align-items: center;">
+    <img [src]="'assets/images/bitcoin-button-white.svg'" style="width: 50px; margin-right: 20px">
     <tao-text
-      [body]="'This page doesn\'t do anything yet'">
+      [hero]="'0.0002'">
     </tao-text>
   </tao-row>
 
-  <tao-row>
+  <tao-row style="display: flex; align-items: center;">
+    <img [src]="'assets/images/dollar-button-white.svg'" style="width: 50px; margin-right: 20px">
     <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
+      [hero]="'$13'">
     </tao-text>
   </tao-row>
 
-  <tao-row>
+  <tao-divider>
+  </tao-divider>
+
+  <tao-row class="text-center">
     <tao-text
-      [body]="'This page doesn\'t do anything yet'">
+      [header]="'Welcome to Tao Wallet!'">
     </tao-text>
   </tao-row>
 
-  <tao-row>
+  <tao-row class="text-center">
     <tao-text
-      [body]="'..except link to the '">
+      [body]="'There are minimal features for now but join our '">
     </tao-text>
     <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
+      [link]="'Telegram'"
+      (action)="goToTelegram()">
     </tao-text>
     <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
+      [body]="' or '">
     </tao-text>
     <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
+      [link]="'Discord'"
+      (action)="goToTelegram()">
     </tao-text>
     <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
-  </tao-row>
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row>
-    <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
+      [body]="' to help build more.'">
     </tao-text>
   </tao-row>
 

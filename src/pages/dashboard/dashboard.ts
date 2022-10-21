@@ -5,12 +5,15 @@ import { Router } from '@angular/router';
 
 import { Storage } from '@ionic/storage';
 
+import { TaoWalletProvider } from 'src/providers/tao-wallet'
+
 @Component({
   templateUrl: './dashboard.html'
 })
 
 export class DashboardPage implements OnInit {
 
+  balances: any;
   form: UntypedFormGroup;
   submitted: boolean;
   showLoginButtons: boolean;
@@ -18,19 +21,31 @@ export class DashboardPage implements OnInit {
   constructor(
     private fb: UntypedFormBuilder,
     private router: Router,
-    public storage: Storage
+    public storage: Storage,
+    private tao: TaoWalletProvider
   ) {
     this.form = this.fb.group({
       login: ['']
     });
   }
 
-  ngOnInit() {
-
+  async ngOnInit() {
+    const login = await this.tao.login();
+    console.log(login);
+    const type = 'bolt11';
+    const amountSats = 10000;
+    const depositAddress = await this.tao.fetchDepositAddress(type, amountSats);
+    console.log(depositAddress);
+    this.balances = await this.tao.fetchBalances();
+    console.log(this.balances);
   }
 
   goToStyleGuidePage() {
     this.router.navigate(['style-guide']);
+  }
+
+  goToTelegram() {
+    //TODO
   }
 
 }

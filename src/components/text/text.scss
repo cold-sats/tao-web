@@ -32,6 +32,15 @@ tao-text{
     line-height: 35px;
   }
 
+  .hero {
+    display: inline;
+    font: 45px Avenir, serif;
+    font-weight: 300;
+    line-height: 13px;
+    color: white;
+    line-height: 35px;
+  }
+
   .action-body{
     display: inline;
     font: 12px Avenir, serif;
@@ -43,7 +52,7 @@ tao-text{
   }
 
   .link {
-    display: inline;
+    display: inline-block;
     font: 16px Avenir, serif;
     font-weight: 400;
     color: #EE9DD3;
