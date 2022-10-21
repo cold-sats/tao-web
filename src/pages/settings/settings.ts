@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
 
 @Component({
-  templateUrl: './settings.html',
+  templateUrl: './settings.html'
 })
 
 export class SettingsPage implements OnInit {
@@ -27,6 +27,10 @@ export class SettingsPage implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  goToStyleGuidePage() {
+    this.router.navigate(['style-guide']);
   }
 
 }

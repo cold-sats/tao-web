@@ -11,8 +11,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 import { IonicStorageModule } from '@ionic/storage';
 
-import { BottomNavComponent } from 'src/components/bottom-nav/bottom-nav';
-import { TopNavComponent } from 'src/components/top-nav/top-nav';
+import { NavComponent } from 'src/components/nav/nav';
 import { InputComponent } from 'src/components/input/input';
 import { ButtonComponent } from 'src/components/button/button';
 import { TextComponent } from 'src/components/text/text';
@@ -28,8 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
-    BottomNavComponent,
-    TopNavComponent,
+    NavComponent,
     InputComponent,
     ButtonComponent,
     TextComponent,

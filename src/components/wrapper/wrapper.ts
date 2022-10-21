@@ -19,7 +19,7 @@ export class WrapperComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.responsive.observe('(min-width: 550px)')
+    this.responsive.observe('(min-width: 650px)')
       .subscribe(result => {
         if (result.matches) {
           this.renderer.addClass(this.el.nativeElement, 'desktop');

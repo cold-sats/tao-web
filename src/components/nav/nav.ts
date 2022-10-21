@@ -4,19 +4,18 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'tao-top-nav',
+  selector: 'tao-nav',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./top-nav.scss'],
-  templateUrl: './top-nav.html'
+  styleUrls: ['./nav.scss'],
+  templateUrl: './nav.html'
 })
 
-export class TopNavComponent implements OnInit {
+export class NavComponent implements OnInit {
 
   @Input() showBackButton: boolean = false;
   @Input() title: string;
   currentPage: string;
-  dashboardImageSrc: string;
-  showTopNav: boolean;
+  navLocation: string;
 
   constructor(
     private responsive: BreakpointObserver,
@@ -25,18 +24,17 @@ export class TopNavComponent implements OnInit {
 
   ngOnInit() {
     this.currentPage = this.router.routerState.snapshot.url;
-    this.responsive.observe('(min-width: 550px)')
+    this.responsive.observe('(min-width: 650px)')
       .subscribe(result => {
         if (result.matches) {
-          this.showTopNav = true;
+          this.navLocation = 'top';
         } else {
-          this.showTopNav = true;
+          this.navLocation = 'bottom';
         }
       });
   }
 
   goToPage(page) {
-    console.log(this.router.routerState.snapshot.url)
     this.router.navigate([page]);
   }
 

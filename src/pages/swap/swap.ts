@@ -1,6 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { Storage } from '@ionic/storage';
 
@@ -16,6 +17,7 @@ export class SwapPage implements OnInit {
 
   constructor(
     private fb: UntypedFormBuilder,
+    private router: Router,
     public storage: Storage
   ) {
     this.form = this.fb.group({
@@ -25,6 +27,10 @@ export class SwapPage implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  goToStyleGuidePage() {
+    this.router.navigate(['style-guide']);
   }
 
 }

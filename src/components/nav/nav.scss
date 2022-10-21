@@ -18,6 +18,22 @@
   }
 }
 
+.bottom-menu-item {
+  cursor: pointer;
+  height: 30px;
+  &:hover {
+    opacity: 60%
+  }
+}
+
+.margin-left-5-pt {
+  margin-left: 7.5%;
+}
+
+.margin-right-5-pt {
+  margin-right: 7.5%;
+}
+
 .margin-right {
   margin-right: 80px;
 }
