@@ -15,7 +15,7 @@ export class IntroPage implements OnInit {
 
   constructor(
     public router: Router,
-    private taoWallet: TaoWalletProvider
+    private tao: TaoWalletProvider
   ) {}
 
   ngOnInit() {
@@ -30,10 +30,19 @@ export class IntroPage implements OnInit {
   }
 
   async goToLoginPage() {
-    const login = await this.taoWallet.login();
+    await this.testTaoEndpoints();
+    //TODO
+  }
+
+  async testTaoEndpoints() {
+    const login = await this.tao.login();
     console.log(login);
-    const getLightningInvoice = await this.taoWallet.getLightningInvoice();
-    console.log(getLightningInvoice);
+    const type = 'bolt11';
+    const amountSats = 10000;
+    const depositAddress = await this.tao.fetchDepositAddress(type, amountSats);
+    console.log(depositAddress);
+    const balances = await this.tao.fetchBalances();
+    console.log(balances);
   }
 
 }
