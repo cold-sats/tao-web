@@ -10,7 +10,7 @@
       [header]="'Part 1: Text'">
     </tao-text>
     <tao-text
-      [link]="'Text Link'">
+      [link]="'Text Link<'">
     </tao-text>
   </tao-row>
 
@@ -20,6 +20,19 @@
     <tao-text
       [body]="'We use text sizes, colors and weighting to distinguish between titles, headers, bodies and links.'">
     </tao-text>
+  </tao-row>
+
+  <tao-row>
+    <form [formGroup]="form" novalidate action="#">
+      <tao-input
+        formControlName="login"
+        [form]="form.controls['login']"
+        [label]="'Input Example'"
+        [icon]="'assets/images/icons/question-mark.svg'"
+        [errorMessage]="'Please enter a valid address'"
+        [submitted]="submitted">
+      </tao-input>
+    </form>
   </tao-row>
 
   <tao-row>

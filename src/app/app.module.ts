@@ -18,6 +18,7 @@ import { TextComponent } from 'src/components/text/text';
 import { WrapperComponent } from 'src/components/wrapper/wrapper';
 import { RowComponent } from 'src/components/row/row';
 import { DividerComponent } from 'src/components/divider/divider';
+import { SkeletonComponent } from 'src/components/skeleton/skeleton';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TextComponent,
     WrapperComponent,
     RowComponent,
+    SkeletonComponent,
     DividerComponent,
     ...pages
   ],

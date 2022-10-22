@@ -2,6 +2,11 @@ tao-row {
   display: block;
   padding-bottom: 20px;
 
+  &.vertical-align-middle {
+    display: flex;
+    align-items: center;
+  }
+
   &.no-padding {
     padding: 0;
   }

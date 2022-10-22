@@ -4,19 +4,34 @@
 
 <tao-wrapper>
 
-  <tao-row style="display: flex; align-items: center;">
-    <img [src]="'assets/images/bitcoin-button-white.svg'" style="width: 50px; margin-right: 20px">
-    <tao-text
-      [hero]="'0.0002'">
-    </tao-text>
-  </tao-row>
+  <div *ngIf="!isLoading">
+    <tao-row class="vertical-align-middle">
+      <img [src]="'assets/images/bitcoin-button-white.svg'" class="large-icon">
+      <tao-text
+        [hero]="'0.0002'">
+      </tao-text>
+    </tao-row>
 
-  <tao-row style="display: flex; align-items: center;">
-    <img [src]="'assets/images/dollar-button-white.svg'" style="width: 50px; margin-right: 20px">
-    <tao-text
-      [hero]="'$13'">
-    </tao-text>
-  </tao-row>
+    <tao-row class="vertical-align-middle">
+      <img [src]="'assets/images/dollar-button-white.svg'" class="large-icon">
+      <tao-text
+        [hero]="'$13'">
+      </tao-text>
+      <tao-skeleton
+        [height]="50">
+      </tao-skeleton>
+    </tao-row>
+  </div>
+
+  <div *ngIf="isLoading">
+    <tao-skeleton
+      [height]="50">
+    </tao-skeleton>
+
+    <tao-skeleton
+      [height]="50">
+    </tao-skeleton>
+  </div>
 
   <tao-divider>
   </tao-divider>

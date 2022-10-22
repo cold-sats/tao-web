@@ -17,6 +17,7 @@ export class DashboardPage implements OnInit {
   form: UntypedFormGroup;
   submitted: boolean;
   showLoginButtons: boolean;
+  isLoading: boolean;
 
   constructor(
     private fb: UntypedFormBuilder,
@@ -30,14 +31,20 @@ export class DashboardPage implements OnInit {
   }
 
   async ngOnInit() {
-    const login = await this.tao.login();
-    console.log(login);
-    const type = 'bolt11';
-    const amountSats = 10000;
-    const depositAddress = await this.tao.fetchDepositAddress(type, amountSats);
-    console.log(depositAddress);
-    this.balances = await this.tao.fetchBalances();
-    console.log(this.balances);
+    this.isLoading = true;
+    try {
+      const login = await this.tao.login();
+      console.log(login);
+      const type = 'bolt11';
+      const amountSats = 10000;
+      const depositAddress = await this.tao.fetchDepositAddress(type, amountSats);
+      console.log(depositAddress);
+      this.balances = await this.tao.fetchBalances();
+      console.log(this.balances);
+      this.isLoading = false;
+    } catch(err) {
+      console.log(err)
+    }
   }
 
   goToStyleGuidePage() {

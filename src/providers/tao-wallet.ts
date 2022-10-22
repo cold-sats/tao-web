@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
+import { LoginModel, BalancesModel } from 'src/models/tao-wallet';
 
 @Injectable()
 export class TaoWalletProvider {
 
-  async login(lnMarketsSecret = '', network = 'testnet') {
+  async login(lnMarketsSecret = '', network = 'testnet'): Promise<LoginModel> {
     lnMarketsSecret = require('crypto').randomBytes(16).toString('hex');
     const payload = {
       lnMarketsSecret: lnMarketsSecret,
@@ -12,7 +13,7 @@ export class TaoWalletProvider {
     return await this.fetch('login', payload);
   }
 
-  async fetchDepositAddress(type = 'bolt11', amountSats) {
+  async fetchDepositAddress(type = 'bolt11', amountSats): Promise<string> {
     let payload = {
       type: type
     }
@@ -20,7 +21,7 @@ export class TaoWalletProvider {
     return await this.fetch('fetch-deposit-address', payload);
   }
 
-  async fetchBalances() {
+  async fetchBalances(): Promise<BalancesModel> {
     return await this.fetch('fetch-balances');
   }
 
