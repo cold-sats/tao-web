@@ -1,23 +1,29 @@
 <tao-nav
-  [title]="'Send Receive'">
+  [title]="'Send Bitcoin'">
 </tao-nav>
 
 <tao-wrapper>
 
-  <tao-row>
+  <tao-row class="vertical-align-middle align-last-right">
+    <img [src]="'assets/images/icons/deposit-bitcoin.svg'" class="large-icon">
     <tao-text
-      [body]="'This page doesn\'t do anything yet'">
+      [hero]="'Deposit'">
     </tao-text>
+    <div>
+      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
+    </div>
   </tao-row>
 
-  <tao-row>
+  <tao-divider></tao-divider>
+
+  <tao-row class="vertical-align-middle align-last-right">
+    <img [src]="'assets/images/icons/bitcoin-withdraw.svg'" class="large-icon">
     <tao-text
-      [body]="'..except link to the '">
+    [hero]="'Withdraw'">
     </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
+    <div>
+      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
+    </div>
   </tao-row>
 
 </tao-wrapper>
