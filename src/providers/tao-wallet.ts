@@ -4,11 +4,10 @@ import { LoginModel, BalancesModel } from 'src/models/tao-wallet';
 @Injectable()
 export class TaoWalletProvider {
 
-  async login(lnMarketsSecret = '', network = 'testnet'): Promise<LoginModel> {
-    lnMarketsSecret = require('crypto').randomBytes(16).toString('hex');
+  async login(lnMarketsSecret): Promise<LoginModel> {
     const payload = {
       lnMarketsSecret: lnMarketsSecret,
-      network: network
+      network: 'testnet'
     }
     return await this.fetch('login', payload);
   }

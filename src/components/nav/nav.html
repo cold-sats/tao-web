@@ -1,7 +1,7 @@
 <ng-container *ngIf="navLocation == 'top'">
   <div style="position: fixed; top: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 60px">
     <a (click)="goToPage('/')"><img src="assets/images/tao-t-black.svg" class="tao-logo"></a>
-    <div style="padding: 13px 60px 0px 0px">
+    <div style="padding: 13px 60px 0px 0px" *ngIf="!hideMenuButtons">
       <a (click)="goToPage('dashboard')" style="margin-left: 70px">
         <img [src]="currentPage == '/dashboard' ? 'assets/images/menu-icons/dashboard-pink.svg' : 'assets/images/menu-icons/dashboard-white.svg'" class="menu-item margin-right fade-in-button">
       </a>
@@ -27,7 +27,7 @@
 </ng-container>
 
 <ng-container *ngIf="navLocation == 'bottom'">
-  <div style="position: fixed; bottom: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 70px">
+  <div style="position: fixed; bottom: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 70px" *ngIf="!hideMenuButtons">
     <div style="margin-top:15px">
       <a (click)="goToPage('dashboard')" class="margin-right-5-pt">
         <img [src]="currentPage == '/dashboard' ? 'assets/images/menu-icons/dashboard-pink.svg' : 'assets/images/menu-icons/dashboard-white.svg'" class="bottom-menu-item">

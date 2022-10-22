@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
 
   @Input() showBackButton: boolean = false;
   @Input() title: string;
+  @Input() hideMenuButtons: string;
   currentPage: string;
   navLocation: string;
 

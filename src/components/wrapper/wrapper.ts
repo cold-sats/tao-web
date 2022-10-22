@@ -12,6 +12,8 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 export class WrapperComponent implements OnInit {
 
+  @Input() isShowingNav = true;
+
   constructor(
     private el : ElementRef,
     private responsive: BreakpointObserver,
@@ -22,11 +24,15 @@ export class WrapperComponent implements OnInit {
     this.responsive.observe('(min-width: 650px)')
       .subscribe(result => {
         if (result.matches) {
-          this.renderer.addClass(this.el.nativeElement, 'desktop');
+          const newClass = this.isShowingNav ? 'desktop' : 'desktop-no-nav';
+          this.renderer.addClass(this.el.nativeElement, newClass);
           this.renderer.removeClass(this.el.nativeElement, 'mobile');
+          this.renderer.removeClass(this.el.nativeElement, 'mobile-no-nav');
         } else {
-          this.renderer.addClass(this.el.nativeElement, 'mobile');
+          const newClass = this.isShowingNav ? 'mobile' : 'mobile-no-nav';
+          this.renderer.addClass(this.el.nativeElement, newClass);
           this.renderer.removeClass(this.el.nativeElement, 'desktop');
+          this.renderer.removeClass(this.el.nativeElement, 'desktop-no-nav');
         }
       });
   }

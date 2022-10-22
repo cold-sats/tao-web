@@ -1,0 +1,45 @@
+<tao-nav
+  [title]="'Welcome to Tao Wallet!'"
+  [hideMenuButtons]="true">
+</tao-nav>
+
+<tao-wrapper>
+
+  <tao-row class="text-center">
+    <tao-text
+      [body]="'Your Secret: '">
+    </tao-text>
+    <tao-text
+      [body]="'<b>' + key + '</b> '">
+    </tao-text>
+    <tao-text
+      [link]="'Copy'"
+      (action)="copyKeyToClipboard()">
+    </tao-text>
+    <tao-text
+      *ngIf="showCopiedSuccess"
+      [body]="' Copied'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row class="text-center">
+    <tao-text
+      [body]="'Save your secret. Do not share it with anyone. This will be your only way to access your funds. '">
+    </tao-text>
+  </tao-row>
+
+  <tao-row>
+    <tao-button
+      [text]="'View the App'"
+      class="primary fade-in-button"
+      [action]="goToDashboardPage.bind(this)">
+    </tao-button>
+  </tao-row>
+
+  <tao-row *ngIf="showCopySecretError" class="text-center">
+    <tao-text
+      [error]="'Please <b>click on copy</b> above to copy your secret before proceeding. It is important that you back this up.'">
+    </tao-text>
+  </tao-row>
+
+</tao-wrapper>

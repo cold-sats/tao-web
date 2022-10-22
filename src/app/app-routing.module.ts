@@ -7,6 +7,7 @@ import { StyleGuidePage } from 'src/pages/style-guide/style-guide';
 import { SendReceivePage } from 'src/pages/send-receive/send-receive';
 import { SwapPage } from 'src/pages/swap/swap';
 import { SettingsPage } from 'src/pages/settings/settings';
+import { GetStartedPage } from 'src/pages/get-started/get-started';
 
 export const pages = [
   DashboardPage,
@@ -14,7 +15,8 @@ export const pages = [
   StyleGuidePage,
   SendReceivePage,
   SwapPage,
-  SettingsPage
+  SettingsPage,
+  GetStartedPage
 ];
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
   { path: 'send-receive', component: SendReceivePage },
   { path: 'swap', component: SwapPage },
   { path: 'settings', component: SettingsPage },
+  { path: 'get-started', component: GetStartedPage },
   { path: '', component: IntroPage }
 ];
 

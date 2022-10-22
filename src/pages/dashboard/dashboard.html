@@ -4,26 +4,23 @@
 
 <tao-wrapper>
 
-  <div *ngIf="!isLoading">
+  <div *ngIf="loaded">
     <tao-row class="vertical-align-middle">
       <img [src]="'assets/images/bitcoin-button-white.svg'" class="large-icon">
       <tao-text
-        [hero]="'0.0002'">
+        [hero]="balances?.balanceBtc">
       </tao-text>
     </tao-row>
 
     <tao-row class="vertical-align-middle">
       <img [src]="'assets/images/dollar-button-white.svg'" class="large-icon">
       <tao-text
-        [hero]="'$13'">
+      [hero]="balances?.balanceUsd">
       </tao-text>
-      <tao-skeleton
-        [height]="50">
-      </tao-skeleton>
     </tao-row>
   </div>
 
-  <div *ngIf="isLoading">
+  <div *ngIf="!loaded">
     <tao-skeleton
       [height]="50">
     </tao-skeleton>
@@ -33,32 +30,11 @@
     </tao-skeleton>
   </div>
 
-  <tao-divider>
-  </tao-divider>
+  <tao-divider></tao-divider>
 
   <tao-row class="text-center">
     <tao-text
-      [header]="'Welcome to Tao Wallet!'">
-    </tao-text>
-  </tao-row>
-
-  <tao-row class="text-center">
-    <tao-text
-      [body]="'There are minimal features for now but join our '">
-    </tao-text>
-    <tao-text
-      [link]="'Telegram'"
-      (action)="goToTelegram()">
-    </tao-text>
-    <tao-text
-      [body]="' or '">
-    </tao-text>
-    <tao-text
-      [link]="'Discord'"
-      (action)="goToTelegram()">
-    </tao-text>
-    <tao-text
-      [body]="' to help build more.'">
+      [body]="'WARNING: This app is in alpha. Use small amounts of Bitcoin.'">
     </tao-text>
   </tao-row>
 

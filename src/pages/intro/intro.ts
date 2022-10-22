@@ -38,23 +38,11 @@ export class IntroPage implements OnInit {
   }
 
   goToGetStartedPage() {
-    this.router.navigate(['dashboard']);
+    this.router.navigate(['get-started']);
   }
 
-  async goToLoginPage() {
-    await this.testTaoEndpoints();
+  goToLoginPage() {
     //TODO
-  }
-
-  async testTaoEndpoints() {
-    const login = await this.tao.login();
-    console.log(login);
-    const type = 'bolt11';
-    const amountSats = 10000;
-    const depositAddress = await this.tao.fetchDepositAddress(type, amountSats);
-    console.log(depositAddress);
-    const balances = await this.tao.fetchBalances();
-    console.log(balances);
   }
 
 }
