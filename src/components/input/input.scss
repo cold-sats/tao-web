@@ -44,3 +44,24 @@ input {
     bottom: 8px;
     left: 1px;
   }
+
+  .form-error {
+    margin-top: -15px;
+    display: block;
+    font: 12px Avenir, serif;
+    font-weight: 300;
+    color: #EE9DD3;
+  }
+
+  .invalid-field {
+    &.mat-form-field-appearance-outline .mat-form-field-outline {
+      color: #EE9DD3 !important;
+    }
+    .mat-form-field-label {
+      color: #EE9DD3 !important;
+    }
+  }
+
+  .invalid-icon {
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }

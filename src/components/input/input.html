@@ -1,10 +1,10 @@
 <mat-form-field
-  [class.invalid-field]="!form.valid && submitted"
+  [ngClass]="(!form.valid && submitted) ? 'invalid-field' : ''"
   appearance="outline"
   class="border-white">
 
   <mat-label *ngIf="label">
-    <img *ngIf="icon" class="outline-field-label-icon" [src]="icon">
+    <img *ngIf="icon" class="outline-field-label-icon" [src]="icon" [ngClass]="(!form.valid && submitted) ? 'invalid-icon' : ''">
     <span *ngIf="label" [ngClass]="{ focused: focused }">{{ label }}</span>
   </mat-label>
 
@@ -34,6 +34,6 @@
 
 </mat-form-field>
 
-<span *ngIf="!form.valid && submitted">
+<span *ngIf="!form.valid && submitted" class="form-error">
   {{ errorMessage }}
 </span>

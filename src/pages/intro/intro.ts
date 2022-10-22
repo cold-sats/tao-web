@@ -42,7 +42,7 @@ export class IntroPage implements OnInit {
   }
 
   goToLoginPage() {
-    //TODO
+    this.router.navigate(['login']);
   }
 
 }

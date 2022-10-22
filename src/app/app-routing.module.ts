@@ -8,6 +8,7 @@ import { SendReceivePage } from 'src/pages/send-receive/send-receive';
 import { SwapPage } from 'src/pages/swap/swap';
 import { SettingsPage } from 'src/pages/settings/settings';
 import { GetStartedPage } from 'src/pages/get-started/get-started';
+import { LoginPage } from 'src/pages/login/login';
 
 export const pages = [
   DashboardPage,
@@ -16,7 +17,8 @@ export const pages = [
   SendReceivePage,
   SwapPage,
   SettingsPage,
-  GetStartedPage
+  GetStartedPage,
+  LoginPage
 ];
 
 const routes: Routes = [
@@ -26,6 +28,7 @@ const routes: Routes = [
   { path: 'swap', component: SwapPage },
   { path: 'settings', component: SettingsPage },
   { path: 'get-started', component: GetStartedPage },
+  { path: 'login', component: LoginPage },
   { path: '', component: IntroPage }
 ];
 
