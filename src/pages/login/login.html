@@ -1,0 +1,33 @@
+<tao-nav
+  [title]="'Login'"
+  [hideMenuButtons]="true">
+</tao-nav>
+
+<form [formGroup]="form" novalidate action="#">
+  <tao-wrapper>
+
+    <tao-row class="text-center">
+      <tao-text
+        [body]="'Welcome back to Tao Wallet!'">
+      </tao-text>
+    </tao-row>
+
+    <tao-row>
+      <tao-input
+        formControlName="key"
+        [form]="form.controls['key']"
+        [label]="'Secret Key'"
+        [icon]="'assets/images/icons/question-mark.svg'"
+        [errorMessage]="'Please enter your secret'"
+        [submitted]="submitted">
+      </tao-input>
+    </tao-row>
+
+    <tao-button
+      [text]="'Login'"
+      class="primary"
+      [action]="login.bind(this)">
+    </tao-button>
+
+  </tao-wrapper>
+</form>

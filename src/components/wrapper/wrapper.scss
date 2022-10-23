@@ -1,0 +1,32 @@
+@import "src/components/style-variables";
+
+tao-wrapper {
+  display: block;
+  margin: auto;
+}
+
+.desktop {
+  width: 500px;
+  background: black;
+  padding: 80px 20px 20px 20px;
+  margin-top: -50px;
+}
+
+.mobile {
+  padding: 75px 15px 0px 15px;
+}
+
+.desktop-no-nav {
+  width: 300px;
+  height: 100%;
+  display: block;
+  background: black;
+  margin-top: 50px;
+  padding-top: 28px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mobile-no-nav {
+  padding: 75px 15px 0px 15px;
+}

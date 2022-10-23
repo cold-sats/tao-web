@@ -1,0 +1,41 @@
+tao-row {
+  display: block;
+  padding-bottom: 20px;
+
+  &.vertical-align-middle {
+    display: flex;
+    align-items: center;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.extra-top-padding {
+    padding-top: 20px;
+  }
+
+  &.extra-bottom-padding {
+    padding-bottom: 30px;
+  }
+
+  &.align-last-right {
+    display: flex;
+    align-items: center;
+    *:last-child {
+      flex: 1;
+      text-align: end;
+      margin-right: 0px;
+    }
+  }
+
+  &.flex div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &.text-center {
+    text-align: center;
+  }
+
+}

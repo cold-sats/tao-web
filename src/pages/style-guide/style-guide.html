@@ -1,0 +1,92 @@
+<tao-nav
+  [title]="'Tao Web Style Guide'"
+  [showBackButton]="true">
+</tao-nav>
+
+<tao-wrapper>
+
+  <tao-row class="align-last-right no-padding">
+    <tao-text
+      [header]="'Part 1: Text'">
+    </tao-text>
+    <tao-text
+      [link]="'Text Link<'">
+    </tao-text>
+  </tao-row>
+
+  <tao-divider></tao-divider>
+
+  <tao-row>
+    <tao-text
+      [body]="'We use text sizes, colors and weighting to distinguish between titles, headers, bodies and links.'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row>
+    <form [formGroup]="form" novalidate action="#">
+      <tao-input
+        formControlName="login"
+        [form]="form.controls['login']"
+        [label]="'Input Example'"
+        [icon]="'assets/images/icons/question-mark.svg'"
+        [errorMessage]="'Please enter a valid address'"
+        [submitted]="submitted">
+      </tao-input>
+    </form>
+  </tao-row>
+
+  <tao-row>
+    <tao-text
+      [title]="'This is a title'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row>
+    <tao-text
+      [header]="'This is a header'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row class="extra-bottom-padding">
+    <tao-text
+      [body]="'This is body'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row class="no-padding">
+    <tao-text
+      [header]="'Part 2: Forms'">
+    </tao-text>
+  </tao-row>
+
+  <tao-divider></tao-divider>
+
+  <tao-row>
+    <form [formGroup]="form" novalidate action="#">
+      <tao-input
+        formControlName="login"
+        [form]="form.controls['login']"
+        [label]="'Input Example'"
+        [icon]="'assets/images/icons/question-mark.svg'"
+        [errorMessage]="'Please enter a valid address'"
+        [submitted]="submitted">
+      </tao-input>
+    </form>
+  </tao-row>
+
+</tao-wrapper>
+
+
+<!--
+  TODO:
+  -image
+  -loading indicator
+  -error message
+  -select
+  -radio buttons
+  -checkbox
+  -text area
+  -toggle
+  -add two columns to row
+  etc.
+-->

@@ -1,0 +1,58 @@
+<ng-container *ngIf="navLocation == 'top'">
+  <div style="position: fixed; top: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 60px">
+    <a (click)="goToPage('/')"><img src="assets/images/tao-t-black.svg" class="tao-logo"></a>
+    <div style="padding: 13px 60px 0px 0px" *ngIf="!hideMenuButtons">
+      <a (click)="goToPage('dashboard')" style="margin-left: 70px">
+        <img [src]="currentPage == '/dashboard' ? 'assets/images/menu-icons/dashboard-pink.svg' : 'assets/images/menu-icons/dashboard-white.svg'" class="menu-item margin-right fade-in-button">
+      </a>
+      <a (click)="goToPage('send-receive')">
+        <img [src]="currentPage == '/send-receive' ? 'assets/images/menu-icons/send-bitcoin-pink.svg' : 'assets/images/menu-icons/send-bitcoin-white.svg'" class="menu-item margin-right fade-in-button">
+      </a>
+      <a (click)="goToPage('swap')">
+        <img [src]="currentPage == '/swap' ? 'assets/images/menu-icons/bitcoin-swap-pink.svg' : 'assets/images/menu-icons/bitcoin-swap-white.svg'" class="menu-item margin-right fade-in-button">
+      </a>
+      <a (click)="goToPage('settings')">
+        <img [src]="currentPage == '/settings' ? 'assets/images/menu-icons/settings-pink.svg' : 'assets/images/menu-icons/settings-white.svg'" class="menu-item margin-right fade-in-button">
+      </a>
+    </div>
+  </div>
+
+  <div style="padding-top: 80px; margin: auto; text-align: center; margin-top: 10px">
+    <a *ngIf="showBackButton" [ngClass]="showBackButton ? '' : 'dont-display'" style="margin-right: 60px; margin-left: -80px; cursor: pointer"><img style="height: 20px; width: 20px" src="assets/images/icons/left-arrow-white.svg"></a>
+    <tao-text
+      *ngIf="title"
+      [title]="title">
+    </tao-text>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="navLocation == 'bottom'">
+  <div style="position: fixed; bottom: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 70px" *ngIf="!hideMenuButtons">
+    <div style="margin-top:15px">
+      <a (click)="goToPage('dashboard')" class="margin-right-5-pt">
+        <img [src]="currentPage == '/dashboard' ? 'assets/images/menu-icons/dashboard-pink.svg' : 'assets/images/menu-icons/dashboard-white.svg'" class="bottom-menu-item">
+      </a>
+      <a (click)="goToPage('send-receive')" class="margin-left-5-pt margin-right-5-pt">
+        <img [src]="currentPage == '/send-receive' ? 'assets/images/menu-icons/send-bitcoin-pink.svg' : 'assets/images/menu-icons/send-bitcoin-white.svg'" class="bottom-menu-item">
+      </a>
+      <a (click)="goToPage('swap')" class="margin-left-5-pt margin-right-5-pt">
+        <img [src]="currentPage == '/swap' ? 'assets/images/menu-icons/bitcoin-swap-pink.svg' : 'assets/images/menu-icons/bitcoin-swap-white.svg'" class="bottom-menu-item">
+      </a>
+      <a (click)="goToPage('settings')" class="margin-left-5-pt">
+        <img [src]="currentPage == '/settings' ? 'assets/images/menu-icons/settings-pink.svg' : 'assets/images/menu-icons/settings-white.svg'" class="bottom-menu-item">
+      </a>
+    </div>
+  </div>
+
+  <div style="position: fixed; top: 0px; margin: auto; text-align: center; background: black; width: 100%; height: 60px">
+    <a (click)="goToPage('/')"><img src="assets/images/tao-t-black.svg" class="tao-logo-mobile"></a>
+    <div style="margin-top:10px">
+      <a *ngIf="showBackButton" [ngClass]="showBackButton ? '' : 'dont-display'" style="margin-right: 60px; margin-left: -80px; cursor: pointer"><img style="height: 20px; width: 20px" src="assets/images/icons/left-arrow-white.svg"></a>
+      <tao-text
+        *ngIf="title"
+        [title]="title">
+      </tao-text>
+    </div>
+  </div>
+
+</ng-container>
