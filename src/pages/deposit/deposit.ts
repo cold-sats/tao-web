@@ -5,32 +5,49 @@ import { Router } from '@angular/router';
 
 import { Storage } from '@ionic/storage';
 
+import { TaoWalletProvider } from 'src/providers/tao-wallet'
+
 @Component({
   templateUrl: './deposit.html'
 })
 
-export class DepositPage implements OnInit {
+export class DepositPage  {
 
   form: UntypedFormGroup;
   submitted: boolean;
-  showLoginButtons: boolean;
+  type: string;
 
   constructor(
     private fb: UntypedFormBuilder,
     private router: Router,
-    public storage: Storage
+    public storage: Storage,
+    private tao: TaoWalletProvider
   ) {
     this.form = this.fb.group({
-      login: ['']
+      amountSats: ['']
     });
   }
 
-  ngOnInit() {
-
+  selectType(type) {
+    this.type = type;
+    if (type == 'bolt11') {
+      this.form.controls['amountSats'].setValidators([Validators.required]);
+    } else {
+      this.form.controls['amountSats'].clearValidators();
+      this.form.controls['amountSats'].updateValueAndValidity();
+    }
   }
 
-  goToStyleGuidePage() {
-    this.router.navigate(['style-guide']);
+  async fetchAddress() {
+    this.submitted = true;
+    if (!this.form.valid) {
+      return;
+    }
+    const address = this.type == 'on-chain' ?
+      await this.tao.fetchDepositAddress(this.type) :
+      await this.tao.fetchDepositAddress(this.type, this.form.value.amountSats);
+    console.log(address)
+    this.router.navigate([`address/${address}`], { state: { address: address } });
   }
 
 }

@@ -1,29 +1,38 @@
 <tao-nav
-  [title]="'Send Bitcoin'">
+  [title]="'Deposit Bitcoin'"
+  [showBackButton]="true">
 </tao-nav>
 
-<tao-wrapper>
+<form [formGroup]="form" novalidate action="#">
+  <tao-wrapper>
 
-  <tao-row class="vertical-align-middle align-last-right">
-    <img [src]="'assets/images/icons/deposit-bitcoin.svg'" class="large-icon">
-    <tao-text
-      [hero]="'Deposit'">
-    </tao-text>
-    <div>
-      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
-    </div>
-  </tao-row>
+    <tao-row class="text-center">
+      <tao-text
+        [header]="'How do you want to deposit Bitcoin?'">
+      </tao-text>
+    </tao-row>
 
-  <tao-divider></tao-divider>
+    <tao-row class="text-center">
+      <a (click)="selectType('bolt11')"><img [src]="'assets/images/Lightning.svg'" class="hero-icon margin-right-40" [ngClass]="type == 'bolt11' ? 'selected-icon' : ''"></a>
+      <a (click)="selectType('on-chain')"><img [src]="'assets/images/on-chain.svg'" class="hero-icon" [ngClass]="type == 'on-chain' ? 'selected-icon' : ''"></a>
+    </tao-row>
 
-  <tao-row class="vertical-align-middle align-last-right">
-    <img [src]="'assets/images/icons/bitcoin-withdraw.svg'" class="large-icon">
-    <tao-text
-    [hero]="'Withdraw'">
-    </tao-text>
-    <div>
-      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
-    </div>
-  </tao-row>
+    <tao-input
+      *ngIf="type == 'bolt11'"
+      formControlName="amountSats"
+      [form]="form.controls['amountSats']"
+      [label]="'Enter the invoice amount in sats (ex: 50000)'"
+      [icon]="'assets/images/icons/question-mark.svg'"
+      [errorMessage]="'Please enter the amount'"
+      [submitted]="submitted">
+    </tao-input>
 
-</tao-wrapper>
+    <tao-button
+      *ngIf="type"
+      [text]="type == 'bolt11' ? 'Generate Lightning Invoice' : 'Generate On Chain Address'"
+      class="primary"
+      [action]="fetchAddress.bind(this)">
+    </tao-button>
+
+  </tao-wrapper>
+</form>

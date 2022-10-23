@@ -11,6 +11,7 @@ import { GetStartedPage } from 'src/pages/get-started/get-started';
 import { LoginPage } from 'src/pages/login/login';
 import { DepositPage } from 'src/pages/deposit/deposit';
 import { WithdrawPage } from 'src/pages/withdraw/withdraw';
+import { AddressPage } from 'src/pages/address/address';
 
 export const pages = [
   DashboardPage,
@@ -22,7 +23,8 @@ export const pages = [
   GetStartedPage,
   LoginPage,
   DepositPage,
-  WithdrawPage
+  WithdrawPage,
+  AddressPage
 ];
 
 const routes: Routes = [
@@ -35,6 +37,7 @@ const routes: Routes = [
   { path: 'login', component: LoginPage },
   { path: 'deposit', component: DepositPage },
   { path: 'withdraw', component: WithdrawPage },
+  { path: 'address/:address', component: AddressPage },
   { path: '', component: IntroPage }
 ];
 

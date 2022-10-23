@@ -29,8 +29,8 @@ export class SendReceivePage implements OnInit {
 
   }
 
-  goToStyleGuidePage() {
-    this.router.navigate(['style-guide']);
+  goToPage(page) {
+    this.router.navigate([page]);
   }
 
 }

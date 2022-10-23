@@ -25,8 +25,9 @@ app.get('/fetch-deposit-address', async (req, res) => {
       type: req.query.type
     }
     if (req.query.amountSats) payload['amountSats'] = parseInt(req.query.amountSats);
-    const invoice = await app.locals.data.tao.fetchDepositAddress(payload);
-    res.json(invoice);
+    const address = await app.locals.data.tao.fetchDepositAddress(payload);
+    console.log(address)
+    res.json(address);
   } catch (error) {
     console.log(error)
   }
@@ -35,6 +36,7 @@ app.get('/fetch-deposit-address', async (req, res) => {
 app.get('/fetch-balances', async (req, res) => {
   try {
     const balances = await app.locals.data.tao.fetchBalances();
+    console.log(balances)
     res.json(balances);
   } catch (error) {
     console.log(error)
@@ -49,6 +51,7 @@ app.get('/swap', async (req, res) => {
       amountUsd: parseInt(req.query.amountUsd)
     }
     const swap = await app.locals.data.tao.swap(payload);
+    console.log(swap)
     res.json(swap);
   } catch (error) {
     console.log(error)
@@ -63,6 +66,7 @@ app.get('/send', async (req, res) => {
     }
     if (req.query.amountSats) payload['amountSats'] = req.query.amountSat;
     const invoice = await app.locals.data.tao.send(payload);
+    console.log(invoice)
     res.json(invoice);
   } catch (error) {
     console.log(error)

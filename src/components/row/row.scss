@@ -1,6 +1,7 @@
 tao-row {
   display: block;
   padding-bottom: 20px;
+  overflow-wrap: break-word;
 
   &.vertical-align-middle {
     display: flex;
