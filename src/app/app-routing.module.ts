@@ -9,6 +9,8 @@ import { SwapPage } from 'src/pages/swap/swap';
 import { SettingsPage } from 'src/pages/settings/settings';
 import { GetStartedPage } from 'src/pages/get-started/get-started';
 import { LoginPage } from 'src/pages/login/login';
+import { DepositPage } from 'src/pages/deposit/deposit';
+import { WithdrawPage } from 'src/pages/withdraw/withdraw';
 
 export const pages = [
   DashboardPage,
@@ -18,7 +20,9 @@ export const pages = [
   SwapPage,
   SettingsPage,
   GetStartedPage,
-  LoginPage
+  LoginPage,
+  DepositPage,
+  WithdrawPage
 ];
 
 const routes: Routes = [
@@ -29,6 +33,8 @@ const routes: Routes = [
   { path: 'settings', component: SettingsPage },
   { path: 'get-started', component: GetStartedPage },
   { path: 'login', component: LoginPage },
+  { path: 'deposit', component: DepositPage },
+  { path: 'withdraw', component: WithdrawPage },
   { path: '', component: IntroPage }
 ];
 
