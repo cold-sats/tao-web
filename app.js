@@ -1,22 +1,12 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
 const TaoWallet = require('tao-wallet');
 require('crypto');
 
-app.listen(3000, () => console.log('Welcome to Tao Wallet! Go to localhost:3000 in your browser.'))
+app.listen(process.env.PORT || 3000, () => console.log('Welcome to Tao Wallet! Go to localhost:3000 in your browser.'))
 app.use(express.static(__dirname + '/dist/tao-web'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 app.locals.data = {};
-
-app.use(cors());
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", '*');
-    res.header("Access-Control-Allow-Credentials", true);
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
-    next();
-});
 
 app.get('/login', async (req, res) => {
   try {
