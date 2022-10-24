@@ -1,12 +1,17 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const TaoWallet = require('tao-wallet');
+require('crypto');
+
 app.listen(3000, () => console.log('Welcome to Tao Wallet! Go to localhost:3000 in your browser.'))
 app.use(express.static(__dirname + '/dist/tao-web'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 app.locals.data = {};
 
-require('crypto');
-const TaoWallet = require('tao-wallet');
+app.use(cors({
+    origin: '*'
+}));
 
 app.get('/login', async (req, res) => {
   try {
