@@ -1,0 +1,41 @@
+<tao-nav
+  [title]="'Balance'">
+</tao-nav>
+
+<tao-wrapper>
+
+  <div *ngIf="loaded">
+    <tao-row class="vertical-align-middle">
+      <img [src]="'assets/images/bitcoin-button-white.svg'" class="large-icon">
+      <tao-text
+        [hero]="'&#8383;' + balances?.balanceBtc">
+      </tao-text>
+    </tao-row>
+
+    <tao-row class="vertical-align-middle">
+      <img [src]="'assets/images/dollar-button-white.svg'" class="large-icon">
+      <tao-text
+        [hero]="'$' + balances?.balanceUsd">
+      </tao-text>
+    </tao-row>
+  </div>
+
+  <div *ngIf="!loaded">
+    <tao-skeleton
+      [height]="50">
+    </tao-skeleton>
+
+    <tao-skeleton
+      [height]="50">
+    </tao-skeleton>
+  </div>
+
+  <tao-divider></tao-divider>
+
+  <tao-row class="text-center">
+    <tao-text
+      [body]="'This app is in alpha. Use small amounts of Bitcoin.'">
+    </tao-text>
+  </tao-row>
+
+</tao-wrapper>

@@ -1,0 +1,39 @@
+<tao-nav
+  [title]="'Settings'">
+</tao-nav>
+
+<tao-wrapper>
+
+  <tao-row class="big-icon-text">
+    <div>
+    <img [src]="'assets/images/icons/key.svg'">
+    </div>
+    <div>
+      <tao-text
+        [body]="'Secret Key:'">
+      </tao-text><br>
+      <tao-text
+        [title]="'124l1kj24124124124'">
+      </tao-text>
+      <tao-text
+        [link]="'Copy'"
+        (action)="copyKeyToClipboard()">
+      </tao-text>
+      <tao-text
+        *ngIf="showCopiedSuccess"
+        [helper]="' Copied'">
+      </tao-text>
+    </div>
+  </tao-row>
+
+
+  <tao-divider></tao-divider>
+
+  <tao-row class="text-center">
+    <tao-text
+      [link]="'Logout'"
+      (action)="logout()">
+    </tao-text>
+  </tao-row>
+
+</tao-wrapper>

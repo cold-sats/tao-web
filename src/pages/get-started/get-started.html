@@ -1,0 +1,51 @@
+<tao-nav
+  [title]="'Welcome!'"
+  [hideMenuButtons]="true"
+  [showBackButton]="true">
+</tao-nav>
+
+<tao-wrapper>
+
+  <tao-row class="big-icon-text">
+    <div>
+    <img [src]="'assets/images/icons/key.svg'">
+    </div>
+    <div>
+      <tao-text
+        [body]="'Secret Key:'">
+      </tao-text><br>
+      <tao-text
+        [title]="'124l1kj24124124124'">
+      </tao-text>
+      <tao-text
+        [link]="'Copy'"
+        (action)="copyKeyToClipboard()">
+      </tao-text>
+      <tao-text
+        *ngIf="showCopiedSuccess"
+        [helper]="' Copied'">
+      </tao-text>
+    </div>
+  </tao-row>
+
+  <tao-row>
+    <tao-text
+      [body]="'Save your key. This will be your ONLY way to access your funds.'">
+    </tao-text>
+  </tao-row>
+
+  <tao-row class="extra-top-padding">
+    <tao-button
+      [text]="'View the App'"
+      class="primary fade-in-button"
+      [action]="goToDashboardPage.bind(this)">
+    </tao-button>
+  </tao-row>
+
+  <tao-row *ngIf="showCopySecretError" class="text-center">
+    <tao-text
+      [error]="'Please <b>click on copy</b> above to copy your secret before proceeding. It is important that you back this up.'">
+    </tao-text>
+  </tao-row>
+
+</tao-wrapper>

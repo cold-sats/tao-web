@@ -1,0 +1,75 @@
+tao-text{
+
+  .error {
+    display: inline;
+    font: 16px Avenir, serif;
+    font-weight: 300;
+    color: #EE9DD3;
+  }
+
+  .body {
+    display: inline;
+    font: 16px Avenir, serif;
+    font-weight: 300;
+    color: white;
+  }
+
+  .header {
+    display: inline;
+    font: 20px Avenir, serif;
+    font-weight: 400;
+    color: white;
+    line-height: 20px;
+  }
+
+  .helper {
+    display: inline;
+    font: 12px Avenir, serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    opacity: 50%;
+  }
+
+  .title {
+    display: inline;
+    font: 27px Avenir, serif;
+    font-weight: 300;
+    line-height: 13px;
+    color: white;
+    line-height: 35px;
+  }
+
+  .hero {
+    display: inline;
+    font: 35px Avenir, serif;
+    font-weight: 300;
+    line-height: 13px;
+    color: white;
+    line-height: 35px;
+  }
+
+  .action-body{
+    display: inline;
+    font: 12px Avenir, serif;
+    font-weight: 300;
+    font-size: 16px;
+    font-weight: 400 !important;
+    cursor: pointer;
+    color: white;
+  }
+
+  .link {
+    display: inline-block;
+    font: 16px Avenir, serif;
+    font-weight: 400;
+    color: #EE9DD3;
+  }
+
+  a.mat-button {
+    line-height: normal;
+    white-space: inherit;
+    padding: 0;
+  }
+
+}

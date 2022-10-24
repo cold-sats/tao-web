@@ -1,0 +1,108 @@
+.intro-page-container {
+  height: 100%;
+  display: block;
+}
+
+.desktop-button {
+  width: 400px;
+  margin: auto;
+  position: fixed;
+  left: 1%;
+  right: 1%;
+}
+
+.mobile-button {
+  width:90%;
+  margin: auto;
+  position: fixed;
+  left: 1%;
+  right: 1%;
+}
+
+.bottom-120 {
+   bottom: 120px;
+}
+
+.bottom-50 {
+   bottom: 50px;
+}
+
+.page-container {
+  width: 400px;
+  margin: auto;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.desktop {
+  width: 400px;
+}
+
+.mobile {
+  width: 400px;
+}
+
+.video-container{
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin-top: -100px;
+}
+
+.video{
+  pointer-events: none;
+}
+
+.fade-in-button {
+  animation-name: FadeIn;
+  animation-duration: 3s;
+  transition-timing-function: linear;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
