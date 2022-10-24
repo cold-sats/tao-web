@@ -1,6 +1,7 @@
 <tao-nav
   [title]="'Login'"
-  [hideMenuButtons]="true">
+  [hideMenuButtons]="true"
+  [showBackButton]="true">
 </tao-nav>
 
 <form [formGroup]="form" novalidate action="#">
@@ -12,16 +13,14 @@
       </tao-text>
     </tao-row>
 
-    <tao-row>
-      <tao-input
-        formControlName="key"
-        [form]="form.controls['key']"
-        [label]="'Secret Key'"
-        [icon]="'assets/images/icons/key.svg'"
-        [errorMessage]="'Please enter your secret'"
-        [submitted]="submitted">
-      </tao-input>
-    </tao-row>
+    <tao-input
+      formControlName="key"
+      [form]="form.controls['key']"
+      [label]="'Secret Key'"
+      [icon]="'assets/images/icons/key.svg'"
+      [errorMessage]="'Please enter your secret key'"
+      [submitted]="submitted">
+    </tao-input>
 
     <tao-button
       [text]="'Login'"

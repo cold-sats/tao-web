@@ -14,8 +14,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
         tappable
         (click)="executeAction()"
         type="submit" block>
-        <span class="button-text">{{text}}</span>
-        <span *ngIf="isLoading" class="loading-indicator">{{text}}</span>
+        <span class="button-text" *ngIf="!isLoading">{{text}}</span>
+        <div class="loader" *ngIf="isLoading"></div>
       </button>
     </div>
   `

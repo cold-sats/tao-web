@@ -48,8 +48,8 @@
 }
 
 .back-button-mobile {
-  margin-right: 60px;
-  margin-left: -80px;
+  position: fixed;
+  left: 0px;
   cursor: pointer;
   &:hover {
     opacity: 70%;

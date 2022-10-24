@@ -78,4 +78,27 @@ tao-button {
     }
   }
 
+  .loader {
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#FFF 50px, transparent 0),
+                      linear-gradient(#FFF 50px, transparent 0),
+                      linear-gradient(#FFF 50px, transparent 0),
+                      linear-gradient(#FFF 50px, transparent 0),
+                      linear-gradient(#FFF 50px, transparent 0),
+                      linear-gradient(#FFF 50px, transparent 0);
+    background-position: 205px center, 220px center, 235px center, 250px center, 265px center, 280px center, 295px center;
+    animation: rikSpikeRoll 0.65s linear infinite alternate;
+  }
+
+  @keyframes rikSpikeRoll {
+    0% { background-size: 10px 3px;}
+    16% { background-size: 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+    33% { background-size: 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px, 10px 3px}
+    50% { background-size: 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px, 10px 3px}
+    66% { background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px}
+    83% { background-size: 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px, 10px 3px}
+    100% { background-size: 10px 3px, 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px}
+  }
+
 }
