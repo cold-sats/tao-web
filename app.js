@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const TaoWallet = require('tao-wallet');
 require('crypto');
-import cors from 'cors';
+const cors = require('cors');
 app.use(cors());
 
 app.listen(process.env.PORT || 3000, () => console.log('Welcome to Tao Wallet! Go to localhost:3000 in your browser.'))
