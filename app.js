@@ -9,9 +9,7 @@ app.use(express.static(__dirname + '/dist/tao-web'));
 app.get('/', (req, res) => res.sendFile(path.join(__dirname)));
 app.locals.data = {};
 
-app.use(cors({
-    origin: '*'
-}));
+app.use(cors());
 
 app.get('/login', async (req, res) => {
   try {
