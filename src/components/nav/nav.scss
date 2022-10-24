@@ -3,28 +3,66 @@
   margin: 10px -5px 0 -40px;
 }
 
+.desktop-title {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
+.mobile-title {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
 .tao-logo {
-  height: 40px;
+  height: 35px;
   float: left;
-  padding: 8px 5px 0px 12px;
+  padding: 12px 5px 0px 12px;
   cursor: pointer;
 }
 
 .tao-logo-mobile {
   position: fixed;
-  top: 5px;
+  top: 8px;
   left: 5px;
-  height: 30px;
+  height: 25px;
   float: left;
   padding: 8px 5px 0px 12px;
   cursor: pointer;
+}
+
+.back-button-desktop {
+  cursor: pointer;
+  margin-right: 470px;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.back-button-mobile {
+  margin-right: 60px;
+  margin-left: -80px;
+  cursor: pointer;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
 }
 
 .menu-item {
   cursor: pointer;
   height: 30px;
   &:hover {
-    opacity: 60%
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
   }
 }
 
@@ -32,7 +70,8 @@
   cursor: pointer;
   height: 30px;
   &:hover {
-    opacity: 60%
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
   }
 }
 
@@ -104,5 +143,5 @@
 }
 
 .menu-button-selected {
-  background-color: #1B1B1B;
+  filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Location } from '@angular/common'
 
 import { Router } from '@angular/router';
 
@@ -19,6 +20,7 @@ export class NavComponent implements OnInit {
   navLocation: string;
 
   constructor(
+    private location: Location,
     private responsive: BreakpointObserver,
     private router: Router
   ) {}
@@ -37,6 +39,10 @@ export class NavComponent implements OnInit {
 
   goToPage(page) {
     this.router.navigate([page]);
+  }
+
+  goBack() {
+    this.location.back()
   }
 
 }

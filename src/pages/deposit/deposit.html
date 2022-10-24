@@ -17,15 +17,17 @@
       <a (click)="selectType('on-chain')"><img [src]="'assets/images/on-chain.svg'" class="hero-icon" [ngClass]="type == 'on-chain' ? 'selected-icon' : ''"></a>
     </tao-row>
 
-    <tao-input
-      *ngIf="type == 'bolt11'"
-      formControlName="amountSats"
-      [form]="form.controls['amountSats']"
-      [label]="'Enter the invoice amount in sats (ex: 50000)'"
-      [icon]="'assets/images/icons/bitcoin.svg'"
-      [errorMessage]="'Please enter the amount'"
-      [submitted]="submitted">
-    </tao-input>
+    <tao-row>
+      <tao-input
+        *ngIf="type == 'bolt11'"
+        formControlName="amountSats"
+        [form]="form.controls['amountSats']"
+        [label]="'Enter the invoice amount in sats (ex: 50000)'"
+        [icon]="'assets/images/icons/bitcoin.svg'"
+        [errorMessage]="'Please enter the amount'"
+        [submitted]="submitted">
+      </tao-input>
+    </tao-row>
 
     <tao-button
       *ngIf="type"

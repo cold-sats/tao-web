@@ -8,15 +8,15 @@
   <div class="page-container">
     <ng-container *ngIf="showLoginButtons">
       <tao-button
-        style="width:400px; margin: auto; position: fixed; bottom: 120px"
+        [ngClass]="showDesktopWidth ? 'desktop-button' : 'mobile-button'"
         [text]="'Get Started'"
-        class="primary fade-in-button"
+        class="primary fade-in-button bottom-120"
         [action]="goToGetStartedPage.bind(this)">
       </tao-button>
       <tao-button
-        style="width:400px; margin: auto; position: fixed; bottom: 50px"
+        [ngClass]="showDesktopWidth ? 'desktop-button' : 'mobile-button'"
         [text]="'Login'"
-        class="secondary fade-in-button"
+        class="secondary fade-in-button bottom-50"
         [action]="goToLoginPage.bind(this)">
       </tao-button>
     </ng-container>

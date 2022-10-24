@@ -3,6 +3,35 @@
   display: block;
 }
 
+.desktop-button {
+  width: 400px;
+  margin: auto;
+  position: fixed;
+  left: 1%;
+  right: 1%;
+}
+
+.mobile-button {
+  width:90%;
+  margin: auto;
+  position: fixed;
+  left: 1%;
+  right: 1%;
+}
+
+.bottom-120 {
+   bottom: 120px;
+}
+
+.bottom-50 {
+   bottom: 50px;
+}
+
+.page-container {
+  width: 400px;
+  margin: auto;
+}
+
 .margin-auto {
   margin: auto;
 }
