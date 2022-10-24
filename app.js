@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const TaoWallet = require('tao-wallet');
 require('crypto');
+import cors from 'cors';
+app.use(cors());
 
 app.listen(process.env.PORT || 3000, () => console.log('Welcome to Tao Wallet! Go to localhost:3000 in your browser.'))
 app.use(express.static(__dirname + '/dist/tao-web'));
