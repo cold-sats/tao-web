@@ -5,30 +5,35 @@
 
 <tao-wrapper>
 
-  <tao-row class="text-center">
-    <tao-text
-      [body]="'Your Secret: '">
-    </tao-text>
-    <tao-text
-      [body]="'<b>' + key + '</b> '">
-    </tao-text>
-    <tao-text
-      [link]="'Copy'"
-      (action)="copyKeyToClipboard()">
-    </tao-text>
-    <tao-text
-      *ngIf="showCopiedSuccess"
-      [body]="' Copied'">
-    </tao-text>
+  <tao-row class="big-icon-text">
+    <div>
+    <img [src]="'assets/images/icons/key.svg'">
+    </div>
+    <div>
+      <tao-text
+        [body]="'Secret Key:'">
+      </tao-text><br>
+      <tao-text
+        [title]="'124l1kj24124124124'">
+      </tao-text>
+      <tao-text
+        [link]="'Copy'"
+        (action)="copyKeyToClipboard()">
+      </tao-text>
+      <tao-text
+        *ngIf="showCopiedSuccess"
+        [helper]="' Copied'">
+      </tao-text>
+    </div>
   </tao-row>
 
   <tao-row class="text-center">
     <tao-text
-      [body]="'Save your secret. Do not share it with anyone. This will be your only way to access your funds. '">
+      [body]="'Save your key. This will be your ONLY way to access your funds.'">
     </tao-text>
   </tao-row>
 
-  <tao-row>
+  <tao-row class="extra-top-padding">
     <tao-button
       [text]="'View the App'"
       class="primary fade-in-button"

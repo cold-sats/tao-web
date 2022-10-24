@@ -24,12 +24,13 @@ export class TaoWalletProvider {
     return await this.fetch('fetch-balances');
   }
 
-  async swap(from = 'btc', to = 'usd', amountUsd) {
+  async swap(from, to, amountUsd) {
     const payload = {
       from: from,
       to: to,
       amountUsd: amountUsd
     }
+    console.log(payload)
     return await this.fetch('swap', payload);
   }
 

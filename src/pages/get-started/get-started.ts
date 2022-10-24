@@ -48,7 +48,8 @@ export class GetStartedPage implements OnInit {
     return this.router.navigate(['dashboard']);
   }
 
-  copyKeyToClipboard() {
+  async copyKeyToClipboard() {
+    await this.storage.set('key', this.key);
     this.showCopySecretError = false;
     this.didCopySecret = true;
     const textArea = document.createElement('textarea');

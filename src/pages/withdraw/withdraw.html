@@ -22,7 +22,7 @@
         formControlName="amountSats"
         [form]="form.controls['amountSats']"
         [label]="type == 'on-chain' ? 'On chain address' : 'Lightning invoice'"
-        [icon]="'assets/images/icons/question-mark.svg'"
+        [icon]="type == 'on-chain' ? 'assets/images/on-chain.svg' : 'assets/images/Lightning.svg'"
         [errorMessage]="type == 'on-chain' ? 'Please enter the on chain address' : 'Please enter the Lightning invoice'"
         [submitted]="submitted">
       </tao-input>
@@ -32,7 +32,7 @@
         formControlName="amountSats"
         [form]="form.controls['amountSats']"
         [label]="'Amount in sats to withdraw (ex: 50000)'"
-        [icon]="'assets/images/icons/question-mark.svg'"
+        [icon]="'assets/images/icons/bitcoin.svg'"
         [errorMessage]="'Please enter the amount'"
         [submitted]="submitted">
       </tao-input>

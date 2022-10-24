@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Storage } from '@ionic/storage';
 
 import { TaoWalletProvider } from 'src/providers/tao-wallet'
 
@@ -16,6 +17,7 @@ export class LoginPage {
   constructor(
     private fb: UntypedFormBuilder,
     private router: Router,
+    private storage: Storage,
     private tao: TaoWalletProvider
   ) {
     this.form = this.fb.group({
@@ -30,6 +32,7 @@ export class LoginPage {
     }
     try {
       const login = await this.tao.login(this.form.value.key);
+      await this.storage.set('key', this.form.value.key);
       return this.router.navigate(['dashboard']);
     } catch(err) {
       return console.log(err);

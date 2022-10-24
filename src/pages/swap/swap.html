@@ -4,20 +4,26 @@
 
 <tao-wrapper>
 
-  <tao-row>
+  <tao-row class="vertical-align-middle align-last-right link" (click)="goToPage('bitcoin-for-usd')">
+    <img [src]="'assets/images/swap-for-usd.svg'" class="large-icon">
     <tao-text
-      [body]="'This page doesn\'t do anything yet'">
+      [hero]="'Bitcoin for USD'">
     </tao-text>
+    <div>
+      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
+    </div>
   </tao-row>
 
-  <tao-row>
+  <tao-divider></tao-divider>
+
+  <tao-row class="vertical-align-middle align-last-right link" (click)="goToPage('usd-for-bitcoin')">
+    <img [src]="'assets/images/swap-for-bitcoin.svg'" class="large-icon">
     <tao-text
-      [body]="'..except link to the '">
+    [hero]="'USD for Bitcoin'">
     </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
-    </tao-text>
+    <div>
+      <img [src]="'assets/images/icons/right-arrow-white.svg'" style="height: 40px">
+    </div>
   </tao-row>
 
 </tao-wrapper>

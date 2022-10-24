@@ -4,19 +4,35 @@
 
 <tao-wrapper>
 
-  <tao-row>
-    <tao-text
-      [body]="'This page doesn\'t do anything yet'">
-    </tao-text>
+  <tao-row class="big-icon-text">
+    <div>
+    <img [src]="'assets/images/icons/key.svg'">
+    </div>
+    <div>
+      <tao-text
+        [body]="'Secret Key:'">
+      </tao-text><br>
+      <tao-text
+        [title]="'124l1kj24124124124'">
+      </tao-text>
+      <tao-text
+        [link]="'Copy'"
+        (action)="copyKeyToClipboard()">
+      </tao-text>
+      <tao-text
+        *ngIf="showCopiedSuccess"
+        [helper]="' Copied'">
+      </tao-text>
+    </div>
   </tao-row>
 
-  <tao-row>
+
+  <tao-divider></tao-divider>
+
+  <tao-row class="text-center">
     <tao-text
-      [body]="'..except link to the '">
-    </tao-text>
-    <tao-text
-      [link]="'Style Guide'"
-      (action)="goToStyleGuidePage()">
+      [link]="'Logout'"
+      (action)="logout()">
     </tao-text>
   </tao-row>
 
