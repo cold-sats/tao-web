@@ -8,14 +8,18 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
     <div class="wrapper">
       <button
         expand="block"
-        class="'mat-raised-button'"
         mat-button
         [disabled]="disabled || isLoading"
-        tappable
-        (click)="executeAction()"
-        type="submit" block>
-        <span class="button-text" *ngIf="!isLoading">{{text}}</span>
-        <div class="loader" *ngIf="isLoading"></div>
+        (click)="executeAction()">
+        <span
+          *ngIf="!isLoading"
+          class="text">
+          {{text}}
+        </span>
+        <div
+          *ngIf="isLoading"
+          class="loader">
+        </div>
       </button>
     </div>
   `
@@ -23,9 +27,9 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 export class ButtonComponent {
 
-  @Input() text: string;
-  @Input() disabled = false;
   @Input() action = null;
+  @Input() disabled = false;
+  @Input() text: string;
   isLoading: boolean;
 
   async executeAction() {

@@ -1,4 +1,3 @@
-
 mat-form-field {
   width: 100%;
 
@@ -25,44 +24,28 @@ input {
   margin-bottom: -3px;
 }
 
+mat-icon {
+  background-size: contain;
+}
 
-  .offset-content {
-    padding-left: 15px;
-  }
+.form-error {
+  margin-top: -15px;
+  display: block;
+  font: 12px Avenir, serif;
+  font-weight: 300;
+  color: #EE9DD3;
+  padding-bottom: 10px;
+}
 
-  mat-icon {
-    background-size: contain;
+.invalid-field {
+  &.mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #EE9DD3 !important;
   }
+  .mat-form-field-label {
+    color: #EE9DD3 !important;
+  }
+}
 
-  .mat-form-field-prefix,
-  .mat-form-field-suffix {
-    padding-left: 10px;
-  }
-
-  .additional-character {
-    position: absolute;
-    bottom: 8px;
-    left: 1px;
-  }
-
-  .form-error {
-    margin-top: -15px;
-    display: block;
-    font: 12px Avenir, serif;
-    font-weight: 300;
-    color: #EE9DD3;
-    padding-bottom: 10px;
-  }
-
-  .invalid-field {
-    &.mat-form-field-appearance-outline .mat-form-field-outline {
-      color: #EE9DD3 !important;
-    }
-    .mat-form-field-label {
-      color: #EE9DD3 !important;
-    }
-  }
-
-  .invalid-icon {
-    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
-  }
+.invalid-icon {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+}

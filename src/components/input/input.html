@@ -4,33 +4,19 @@
   class="border-white">
 
   <mat-label *ngIf="label">
-    <img *ngIf="icon" class="outline-field-label-icon" [src]="icon" [ngClass]="(!form.valid && submitted) ? 'invalid-icon' : ''">
-    <span *ngIf="label" [ngClass]="{ focused: focused }">{{ label }}</span>
+    <img
+      *ngIf="icon"
+      class="outline-field-label-icon"
+      [src]="icon"
+      [ngClass]="(!form.valid && submitted) ? 'invalid-icon' : ''">
+    <span *ngIf="label">
+      {{label}}
+    </span>
   </mat-label>
 
   <input
-    *ngIf="!inputMask"
     matInput
-    #neurotypicalInput
-    (keydown)="changeTouch()"
-    (keyup)="keyUpHandle($event)"
-    [(ngModel)]="value"
-    [attr.inputMode]="inputMode"
-    (focus)="setFocused(true)"
-    (focusout)="setFocused(false)"/>
-
-  <input
-    *ngIf="inputMask"
-    [attr.maxlength]="inputMask.maxLength"
-    matInput
-    #maskedInput
-    [class.offset-content]="inputMask?.additionalCharacter && !isInputEmpty"
-    (keydown)="changeTouch()"
-    [(ngModel)]="value"
-    (keyup)="keyUpHandle($event)"
-    [attr.inputMode]="inputMode"
-    (focus)="setFocused(true)"
-    (focusout)="setFocused(false)"/>
+    [(ngModel)]="value"/>
 
 </mat-form-field>
 

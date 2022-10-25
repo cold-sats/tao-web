@@ -7,22 +7,10 @@ import { Router, NavigationEnd } from '@angular/router';
   templateUrl: './app.component.html'
 })
 
-export class AppComponent implements OnInit {
-
-  loaded: boolean;
+export class AppComponent {
 
   constructor(
     private router: Router
   ) {}
-
-  async ngOnInit() {
-    this.loaded = false;
-    try {
-      const hasSecret = false //TODO
-    } catch(err) {
-      console.log(err)
-    }
-    this.loaded = true;
-  }
 
 }

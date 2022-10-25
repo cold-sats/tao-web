@@ -1,9 +1,9 @@
 import { ControlValueAccessor } from '@angular/forms';
 
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
+
   private innerValue: T;
   public disableElement = false;
-
   private changed = new Array<(value: T) => void>();
   private touched = new Array<() => void>();
 
@@ -37,4 +37,5 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
   setDisabledState(isDisabled: boolean) {
     this.disableElement = isDisabled;
   }
+  
 }

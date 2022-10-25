@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'tao-divider',
@@ -9,10 +9,4 @@ import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
   `
 })
 
-export class DividerComponent implements OnInit {
-
-  ngOnInit() {
-    //Can add behavior here in the future
-  }
-
-}
+export class DividerComponent {}

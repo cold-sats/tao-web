@@ -1,29 +1,30 @@
-@import "src/components/style-variables";
-
 tao-button {
 
   display: block;
 
-  .button-text {
+  .text {
     display: inline;
     font: 18px Avenir, serif;
     font-weight: 330;
     color: black;
   }
 
-  .wrapper{
+  .wrapper {
     position: relative;
   }
-  [disabled]{
+
+  [disabled] {
     opacity: 0.5;
   }
-  loading-indicator{
+
+  loading-indicator {
     margin-left: 10px;
     color: white;
     width: 20px;
     height: 33px;
   }
-  button{
+
+  button {
     height:50px;
     padding: 5px 5px !important;
     display: block;
@@ -31,21 +32,9 @@ tao-button {
     white-space: normal !important;
     line-height: normal !important;
   }
-  span{
-    font-family: $default-font !important;
-    text-align: center !important;
-    display: block;
-    padding: 5px 0;
-  }
 
-  tao-text {
-    span {
-      color: white !important;
-    }
-  }
-
-  &.primary{
-    button{
+  &.primary {
+    button {
       background: #EE9DD3 !important;
       animation: fadeIn 5s;
     }
@@ -63,18 +52,9 @@ tao-button {
     }
   }
 
-  &.secondary:hover{
+  &.secondary:hover {
     button{
       opacity:90% !important;
-    }
-  }
-
-  &.no-padding{
-    button{
-      padding: 0px 0px !important;
-      display: '';
-      width: '';
-      background: #41CAB7 !important;
     }
   }
 
@@ -99,6 +79,57 @@ tao-button {
     66% { background-size: 10px 3px, 10px 10px, 10px 30px, 10px 50px, 10px 3px, 10px 3px}
     83% { background-size: 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px, 10px 3px}
     100% { background-size: 10px 3px, 10px 3px, 10px 3px,  10px 10px, 10px 30px, 10px 50px}
+  }
+
+  &.fade-in-button {
+    animation-name: FadeIn;
+    animation-duration: 3s;
+    transition-timing-function: linear;
+  }
+
+  @keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-ms-keyframes FadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
 }
