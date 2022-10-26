@@ -13,15 +13,25 @@
     </tao-row>
 
     <tao-row class="align-center">
-      <a (click)="selectType('bolt11')"><img [src]="'assets/images/Lightning.svg'" class="hero-icon margin-right-40" [ngClass]="type == 'bolt11' ? 'selected-icon' : ''"></a>
-      <a (click)="selectType('on-chain')"><img [src]="'assets/images/on-chain.svg'" class="hero-icon" [ngClass]="type == 'on-chain' ? 'selected-icon' : ''"></a>
+      <a (click)="selectType('bolt11')">
+        <img
+          [src]="'assets/images/Lightning.svg'"
+          class="hero-icon margin-right-40"
+          [ngClass]="type == 'bolt11' ? 'selected-icon' : ''">
+      </a>
+      <a (click)="selectType('on-chain')">
+        <img
+          [src]="'assets/images/on-chain.svg'"
+          class="hero-icon"
+          [ngClass]="type == 'on-chain' ? 'selected-icon' : ''">
+      </a>
     </tao-row>
 
     <tao-input
       *ngIf="type == 'bolt11'"
       formControlName="amountSats"
       [form]="form.controls['amountSats']"
-      [label]="'Enter the invoice amount in sats (ex: 50000)'"
+      [label]="'Invoice amount in sats (ex: 50000)'"
       [icon]="'assets/images/bitcoin.svg'"
       [errorMessage]="'Please enter the amount'"
       [submitted]="submitted">

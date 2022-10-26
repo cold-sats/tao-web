@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { Storage } from '@ionic/storage';
-
 import { TaoWalletProvider } from 'src/providers/tao-wallet'
 
 @Component({

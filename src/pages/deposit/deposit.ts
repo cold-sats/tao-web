@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { Storage } from '@ionic/storage';
-
 import { TaoWalletProvider } from 'src/providers/tao-wallet'
 
 @Component({
@@ -20,7 +18,6 @@ export class DepositPage  {
   constructor(
     private fb: UntypedFormBuilder,
     private router: Router,
-    public storage: Storage,
     private tao: TaoWalletProvider
   ) {
     this.form = this.fb.group({
@@ -46,7 +43,6 @@ export class DepositPage  {
     const address = this.type == 'on-chain' ?
       await this.tao.fetchDepositAddress(this.type) :
       await this.tao.fetchDepositAddress(this.type, this.form.value.amountSats);
-    console.log(address)
     this.router.navigate([`address/${address}`], { state: { address: address } });
   }
 

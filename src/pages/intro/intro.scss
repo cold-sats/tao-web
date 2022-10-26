@@ -32,19 +32,7 @@
   margin: auto;
 }
 
-.margin-auto {
-  margin: auto;
-}
-
-.desktop {
-  width: 400px;
-}
-
-.mobile {
-  width: 400px;
-}
-
-.video-container{
+.video-container {
   overflow:hidden;
   display: flex;
   justify-content: center;
@@ -52,6 +40,6 @@
   margin-top: -100px;
 }
 
-.video{
+.video {
   pointer-events: none;
 }

@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
-import { TaoWalletProvider } from 'src/providers/tao-wallet'
-
 @Component({
   templateUrl: './intro.html',
   styleUrls: ['./intro.scss']
@@ -18,8 +16,7 @@ export class IntroPage implements OnInit {
   constructor(
     private el : ElementRef,
     private responsive: BreakpointObserver,
-    public router: Router,
-    private tao: TaoWalletProvider
+    public router: Router
   ) {}
 
   ngOnInit() {
