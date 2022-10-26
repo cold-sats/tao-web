@@ -6,9 +6,9 @@
 <form [formGroup]="form" novalidate action="#">
   <tao-wrapper>
 
-    <tao-row class="text-center">
+    <tao-row class="align-center">
       <tao-text
-        [header]="type == 'bitcoin-for-usd' ? 'Swap USD for Bitcoin' : 'Swap Bitcoin for USD'">
+        [header]="type == 'bitcoin-for-usd' ? 'Swap Bitcoin for USD' : 'Swap USD for Bitcoin'">
       </tao-text>
     </tao-row>
 
@@ -29,7 +29,7 @@
       </tao-button>
     </tao-row>
 
-    <tao-row class="text-center">
+    <tao-row class="align-center">
       <tao-text
         [body]="'WARNING: There is no way to withdraw USD with Tao Wallet yet.'">
       </tao-text>

@@ -23,32 +23,30 @@ import {Component, ViewEncapsulation, Input, OnInit, OnChanges, Output, EventEmi
 
 export class TextComponent implements OnInit, OnChanges {
 
+  @Output() action: EventEmitter<any> = new EventEmitter();
   @Input() body: string;
+  @Input() hero: string;
   @Input() helper: string;
   @Input() header: string;
-  @Input() title: string;
-  @Input() hero: string;
   @Input() link: string;
   @Input() error: string;
-
-  @Output() action: EventEmitter<any> = new EventEmitter();
+  @Input() title: string;
   cooldown = false;
+  currentText = '';
+  items = {
+    body: 'body',
+    error: 'error',
+    header: 'header',
+    hero: 'hero',
+    helper: 'helper',
+    link: 'link',
+    title: 'title'
+  };
+  currentClass: { [key: string]: boolean };
 
   constructor(
     private elementRef: ElementRef
   ) {}
-
-  currentText = '';
-  items = {
-    body: 'body',
-    header: 'header',
-    title: 'title',
-    hero: 'hero',
-    helper: 'helper',
-    link: 'link',
-    error: 'error'
-  };
-  currentClass: { [key: string]: boolean };
 
   ngOnInit() {
     this.setText();

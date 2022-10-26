@@ -22,7 +22,7 @@ tao-row {
     align-items: center;
   }
 
-  &.text-center {
+  &.align-center {
     text-align: center;
     justify-content: center;
   }
@@ -39,7 +39,7 @@ tao-row {
     padding-bottom: 30px;
   }
 
-  &.align-last-right {
+  &.align-last-child-right {
     display: flex;
     align-items: center;
     *:last-child {
@@ -48,11 +48,5 @@ tao-row {
       margin-right: 0px;
     }
   }
-
-  &.flex div {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
 
 }

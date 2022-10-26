@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'tao-row',
@@ -9,10 +9,6 @@ import { Component, Input, ViewEncapsulation, OnInit } from '@angular/core';
     `
 })
 
-export class RowComponent implements OnInit {
-
-  ngOnInit() {
-    //Can add behavior here in the future
-  }
+export class RowComponent {
 
 }

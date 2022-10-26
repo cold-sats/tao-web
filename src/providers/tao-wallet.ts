@@ -12,7 +12,7 @@ export class TaoWalletProvider {
     return await this.fetch('login', payload);
   }
 
-  async fetchDepositAddress(type = 'bolt11', amountSats = null): Promise<string> {
+  async fetchDepositAddress(type, amountSats = null): Promise<string> {
     let payload = {
       type: type
     }
@@ -34,7 +34,7 @@ export class TaoWalletProvider {
     return await this.fetch('swap', payload);
   }
 
-  async send(type = 'bolt11', address, amountSats = null) {
+  async send(type, address, amountSats = null) {
     let payload = {
       type: type,
       address: address

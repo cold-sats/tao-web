@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Location } from '@angular/common'
-
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,9 +12,9 @@ import { Router } from '@angular/router';
 
 export class NavComponent implements OnInit {
 
+  @Input() hideMenuButtons: string;
   @Input() showBackButton: boolean = false;
   @Input() title: string;
-  @Input() hideMenuButtons: string;
   currentPage: string;
   navLocation: string;
 

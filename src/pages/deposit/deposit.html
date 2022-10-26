@@ -6,13 +6,13 @@
 <form [formGroup]="form" novalidate action="#">
   <tao-wrapper>
 
-    <tao-row class="text-center">
+    <tao-row class="align-center">
       <tao-text
         [header]="'How do you want to deposit Bitcoin?'">
       </tao-text>
     </tao-row>
 
-    <tao-row class="text-center">
+    <tao-row class="align-center">
       <a (click)="selectType('bolt11')"><img [src]="'assets/images/Lightning.svg'" class="hero-icon margin-right-40" [ngClass]="type == 'bolt11' ? 'selected-icon' : ''"></a>
       <a (click)="selectType('on-chain')"><img [src]="'assets/images/on-chain.svg'" class="hero-icon" [ngClass]="type == 'on-chain' ? 'selected-icon' : ''"></a>
     </tao-row>

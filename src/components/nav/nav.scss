@@ -1,9 +1,90 @@
-.menu-container {
+.desktop-nav-container {
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 60px;
+}
+
+.desktop-title-container {
+  padding-top: 80px;
+  margin: auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -25px;
+}
+
+.desktop-tao-logo {
+  height: 35px;
   float: left;
-  margin: 10px -5px 0 -40px;
+  padding: 12px 5px 0px 12px;
+  cursor: pointer;
+}
+
+.desktop-padding {
+  padding: 13px 60px 0px 0px;
+}
+
+.desktop-back-button-container {
+  margin: auto;
+  text-align: center;
 }
 
 .desktop-title {
+  display: inline;
+  font: 27px Avenir, serif;
+  font-weight: 300;
+  line-height: 13px;
+  color: white;
+  line-height: 35px;
+}
+
+.desktop-back-button {
+  cursor: pointer;
+  margin-right: 470px;
+  &:hover {
+    opacity: 70%;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
+  }
+}
+
+.desktop-back-button-image {
+  height: 20px;
+  width: 20px;
+}
+
+.mobile-nav-container {
+  position: fixed;
+  bottom: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 70px;
+}
+.mobile-nav-container {
+  position: fixed;
+  bottom: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 70px;
+}
+
+.mobile-title-container {
+  position: fixed;
+  top: 0px;
+  margin: auto;
+  text-align: center;
+  background: black;
+  width: 100%;
+  height: 60px;
+}
+
+.mobile-title-text-container {
   display: inline;
   font: 27px Avenir, serif;
   font-weight: 300;
@@ -21,14 +102,18 @@
   line-height: 35px;
 }
 
-.tao-logo {
-  height: 35px;
-  float: left;
-  padding: 12px 5px 0px 12px;
-  cursor: pointer;
+.mobile-title-margin {
+  margin-top:12px;
+  margin-bottom: -30px;
 }
 
-.tao-logo-mobile {
+.mobile-back-button-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+}
+
+.mobile-tao-logo {
   position: fixed;
   top: 8px;
   left: 5px;
@@ -38,16 +123,7 @@
   cursor: pointer;
 }
 
-.back-button-desktop {
-  cursor: pointer;
-  margin-right: 470px;
-  &:hover {
-    opacity: 70%;
-    filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
-  }
-}
-
-.back-button-mobile {
+.mobile-back-button {
   position: fixed;
   left: 0px;
   cursor: pointer;
@@ -55,6 +131,20 @@
     opacity: 70%;
     filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
   }
+}
+
+.mobile-back-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-left-70 {
+  margin-left: 70px;
 }
 
 .menu-item {
@@ -75,73 +165,14 @@
   }
 }
 
-.margin-left-5-pt {
+.margin-left-8 {
   margin-left: 8%;
 }
 
-.margin-right-5-pt {
+.margin-right-8 {
   margin-right: 8%;
 }
 
-.margin-right {
+.margin-right-80 {
   margin-right: 80px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  margin-bottom: 20px;
-}
-
-.logo-title-container {
-  line-height: 1.2em;
-}
-
-.menu-header-container {
-  margin: 15px 0px 1px 12px;
-  opacity: 30%
-}
-
-.menu-button-container {
-  padding: 10px 15px 8px 0px;
-  cursor: pointer;
-}
-
-.menu-button-container:hover {
-  background-color: #1B1B1B;
-  cursor: pointer;
-}
-
-.logo {
-  width: 40px;
-  margin: 0px 10px 0 12px;
-}
-
-.logo:hover {
-  cursor: pointer;
-  opacity: 60%
-}
-
-.menu-text {
-  font: 14px Avenir, serif;
-  color: white;
-}
-
-.frequency-icon {
-  height: 17px;
-  margin: 0 5px -3px 13px;
-  cursor: pointer;
-}
-
-.no-data {
-  opacity: 40%;
-}
-
-.link-selected {
-  opacity: 70%
-}
-
-.menu-button-selected {
-  filter: brightness(0) saturate(100%) invert(96%) sepia(45%) saturate(5035%) hue-rotate(277deg) brightness(95%) contrast(97%);
 }
