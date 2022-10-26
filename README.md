@@ -1,5 +1,8 @@
-<img width="330" alt="image" src="https://user-images.githubusercontent.com/39313620/197959700-dcadb26c-fdbf-44f6-ab0c-8cdfa422db41.png">
-<img width="330" alt="image" src="https://user-images.githubusercontent.com/39313620/197959952-8e7afad4-9582-495c-b3cd-570d948d127c.png">
+<p float="left">
+  <img src="https://user-images.githubusercontent.com/39313620/197959700-dcadb26c-fdbf-44f6-ab0c-8cdfa422db41.png" width="33%"/>
+  <img src="https://user-images.githubusercontent.com/39313620/197959952-8e7afad4-9582-495c-b3cd-570d948d127c.png" width="33%"/> 
+  <img src="https://user-images.githubusercontent.com/39313620/197962956-a245c24d-2c58-429d-93c3-128d1d49d228.png" width="33%"/> 
+</p>
 
 # tao-web
 tao-web implements the [tao-wallet](https://github.com/dannydeezy/tao-wallet) npm package to let you swap between Bitcoin and USD. tao-wallet currently utilizes the LN Markets API so all Bitcoin you send to tao-web will be custodied by LN Markets.
