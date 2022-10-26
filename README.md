@@ -1,7 +1,7 @@
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/39313620/197959700-dcadb26c-fdbf-44f6-ab0c-8cdfa422db41.png" width="33%"/>
-  <img src="https://user-images.githubusercontent.com/39313620/197959952-8e7afad4-9582-495c-b3cd-570d948d127c.png" width="33%"/> 
-  <img src="https://user-images.githubusercontent.com/39313620/197962956-a245c24d-2c58-429d-93c3-128d1d49d228.png" width="33%"/> 
+  <img src="https://user-images.githubusercontent.com/39313620/197959700-dcadb26c-fdbf-44f6-ab0c-8cdfa422db41.png" width="32%"/>
+  <img src="https://user-images.githubusercontent.com/39313620/197959952-8e7afad4-9582-495c-b3cd-570d948d127c.png" width="32%"/> 
+  <img src="https://user-images.githubusercontent.com/39313620/197962956-a245c24d-2c58-429d-93c3-128d1d49d228.png" width="32%"/> 
 </p>
 
 # tao-web
