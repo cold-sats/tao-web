@@ -5,9 +5,9 @@
 </p>
 
 <p float="left">
+  <img src="https://user-images.githubusercontent.com/39313620/198188529-13ed7db6-064c-4066-b4de-f42caa2de817.png" width="32%"/>
+  <img src="https://user-images.githubusercontent.com/39313620/198188657-7e660e86-fc58-4861-a697-7e0716deefa8.png" width="32%"/>
   <img src="https://user-images.githubusercontent.com/39313620/197962956-a245c24d-2c58-429d-93c3-128d1d49d228.png" width="32%"/>
-  <img src="https://user-images.githubusercontent.com/39313620/198188657-7e660e86-fc58-4861-a697-7e0716deefa8.png" width="32%"/> 
-  <img src="https://user-images.githubusercontent.com/39313620/198188529-13ed7db6-064c-4066-b4de-f42caa2de817.png" width="32%"/> 
 </p>
 
 # tao-web
