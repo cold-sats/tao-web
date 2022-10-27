@@ -24,6 +24,7 @@ import {Component, ViewEncapsulation, Input, OnInit, OnChanges, Output, EventEmi
 export class TextComponent implements OnInit, OnChanges {
 
   @Output() action: EventEmitter<any> = new EventEmitter();
+  @Input() smallBody: string;
   @Input() body: string;
   @Input() hero: string;
   @Input() helper: string;
@@ -34,6 +35,7 @@ export class TextComponent implements OnInit, OnChanges {
   cooldown = false;
   currentText = '';
   items = {
+    smallBody: 'small-body',
     body: 'body',
     error: 'error',
     header: 'header',

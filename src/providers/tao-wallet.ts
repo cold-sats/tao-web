@@ -7,12 +7,12 @@ export class TaoWalletProvider {
   async login(lnMarketsSecret): Promise<LoginModel> {
     const payload = {
       lnMarketsSecret: lnMarketsSecret,
-      network: 'testnet'
+      network: 'mainnet'
     }
     return await this.fetch('login', payload);
   }
 
-  async fetchDepositAddress(type, amountSats = null): Promise<string> {
+  async fetchDepositAddress(type, amountSats): Promise<string> {
     let payload = {
       type: type
     }
@@ -30,11 +30,10 @@ export class TaoWalletProvider {
       to: to,
       amountUsd: amountUsd
     }
-    console.log(payload)
     return await this.fetch('swap', payload);
   }
 
-  async send(type, address, amountSats = null) {
+  async send(type, address, amountSats) {
     let payload = {
       type: type,
       address: address

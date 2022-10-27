@@ -41,7 +41,7 @@ export class DepositPage  {
       return;
     }
     const address = this.type == 'on-chain' ?
-      await this.tao.fetchDepositAddress(this.type) :
+      await this.tao.fetchDepositAddress(this.type, null) :
       await this.tao.fetchDepositAddress(this.type, this.form.value.amountSats);
     this.router.navigate([`address/${address}`], { state: { address: address } });
   }

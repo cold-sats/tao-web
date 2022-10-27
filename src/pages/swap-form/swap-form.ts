@@ -36,9 +36,9 @@ export class SwapFormPage implements OnInit {
       return;
     }
     if (this.type == 'bitcoin-for-usd') {
-      await this.tao.swap('btc', 'usd', this.form.value.amountUsd);
+      this.tao.swap('btc', 'usd', this.form.value.amountUsd);
     } else {
-      await this.tao.swap('usd', 'btc', this.form.value.amountUsd);
+      this.tao.swap('usd', 'btc', this.form.value.amountUsd);
     }
     this.router.navigate(['dashboard']);
   }

@@ -64,7 +64,7 @@ app.get('/send', async (req, res) => {
       type: req.query.type,
       address: req.query.address
     }
-    if (req.query.amountSats) payload['amountSats'] = req.query.amountSat;
+    if (req.query.amountSats) payload['amountSats'] = parseInt(req.query.amountSats);
     const invoice = await app.locals.data.tao.send(payload);
     console.log(invoice)
     res.json(invoice);

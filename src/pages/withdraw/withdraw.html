@@ -29,8 +29,8 @@
 
     <div *ngIf="type">
       <tao-input
-        formControlName="amountSats"
-        [form]="form.controls['amountSats']"
+        formControlName="address"
+        [form]="form.controls['address']"
         [label]="type == 'on-chain' ? 'On chain address' : 'Lightning invoice'"
         [icon]="type == 'on-chain' ? 'assets/images/on-chain.svg' : 'assets/images/Lightning.svg'"
         [errorMessage]="type == 'on-chain' ? 'Please enter the on chain address' : 'Please enter the Lightning invoice'"

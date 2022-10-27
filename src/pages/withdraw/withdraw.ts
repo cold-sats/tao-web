@@ -42,9 +42,9 @@ export class WithdrawPage  {
       return;
     }
     if (this.type == 'on-chain') {
-      await this.tao.send(this.type, this.form.value.address, this.form.value.amountSats);
+      this.tao.send(this.type, this.form.value.address, this.form.value.amountSats);
     } else {
-      await this.tao.send(this.type, this.form.value.address);
+      this.tao.send(this.type, this.form.value.address, null);
     }
     this.router.navigate(['dashboard']);
   }
